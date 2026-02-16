@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Danish - AI Portfolio Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="avatar">
+                <span class="avatar-icon">MD</span>
+            </div>
+            <div class="header-info">
+                <h1>Muhammad Danish AI Assistant</h1>
+                <p class="subtitle">Portfolio Chatbot</p>
+            </div>
+            <button class="clear-btn" id="clearBtn" title="Clear Chat">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                </svg>
+            </button>
+        </header>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <div class="section-header">
+                        <span class="section-icon">👋</span>
+                        <h2>Welcome!</h2>
+                    </div>
+                    <p>Hello! I'm Muhammad Danish's AI-powered portfolio assistant. How can I help you today?</p>
+                    <p style="margin-top: 8px;">I can tell you about his <strong>skills</strong>, <strong>projects</strong>, <strong>services</strong>, <strong>career goals</strong>, <strong>hobbies</strong>, and more.</p>
+                    <p style="margin-top: 8px;">Feel free to ask anything or use the quick buttons below!</p>
+                    <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #E2E8F0;">
+                        <p style="font-size: 11px; color: #64748B; margin-bottom: 6px;">📬 Get in touch:</p>
+                        <p style="font-size: 12px;">
+                            <a href="mailto:muhaammadanish2327@gmail.com" style="color: #3B82F6; text-decoration: none; margin-right: 12px;">✉️ muhaammadanish2327@gmail.com</a>
+                            <a href="https://muhammaddanish-sage.vercel.app/" target="_blank" style="color: #3B82F6; text-decoration: none;">🌐 muhammaddanish-sage.vercel.app</a>
+                        </p>
+                    </div>
+                </div>
+                <span class="timestamp">Just now</span>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="quick-btn" data-question="What are Muhammad Danish's skills?">💼 Skills</button>
+            <button class="quick-btn" data-question="Tell me about his projects">🚀 Projects</button>
+            <button class="quick-btn" data-question="What services does he offer?">🛠️ Services</button>
+            <button class="quick-btn" data-question="Why should I hire him?">💡 Hire Me</button>
+            <button class="quick-btn" data-question="What are his career goals?">🎯 Career</button>
+            <button class="quick-btn" data-question="What are his hobbies?">🏏 Hobbies</button>
+        </div>
+
+        <form class="chat-input" id="chatForm">
+            <input type="text" id="userInput" placeholder="Ask me about Muhammad Danish..." autocomplete="off">
+            <button type="submit" class="send-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
