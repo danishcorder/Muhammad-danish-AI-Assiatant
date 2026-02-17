@@ -67,6 +67,34 @@ const portfolioData = {
             technologies: "Python, MS Excel, MySQL",
             live: "https://muhammaddanish-sage.vercel.app/",
             github: "https://github.com/danishcorder"
+        },
+        {
+            name: "Database Management System",
+            description: "A web-based database management system project with CRUD operations and user-friendly interface.",
+            technologies: "HTML, CSS, JavaScript",
+            live: "https://danishcorder.github.io/DatabaseManagment/index.html",
+            github: "https://github.com/danishcorder/DatabaseManagment"
+        },
+        {
+            name: "Top 2025 Level Site",
+            description: "A modern, visually impressive website demonstrating advanced front-end techniques and UI/UX best practices.",
+            technologies: "HTML, CSS, JavaScript",
+            live: "https://danishcorder.github.io/Top-2025-level-site/",
+            github: "https://github.com/danishcorder/Top-2025-level-site/"
+        },
+        {
+            name: "World Wonders",
+            description: "An interactive site showcasing the wonders of the world with engaging visuals and information.",
+            technologies: "HTML, CSS, JavaScript",
+            live: "https://danishcorder.github.io/World-Wonders/",
+            github: "https://github.com/danishcorder/World-Wonders"
+        },
+        {
+            name: "Data Dashboard ",
+            description: "A data dashboard web app for visualizing and analyzing datasets in a clean, modern interface.",
+            technologies: "HTML, CSS, JavaScript",
+            live: "https://danishcorder.github.io/DatadashBoard2/",
+            github: "https://github.com/danishcorder/DatadashBoard2/"
         }
     ],
     
@@ -198,24 +226,25 @@ const responses = {
         ${cvButtons}
     `,
     
-    // Projects
+    // Projects (concise, structured, recruiter-friendly)
     projects: () => `
         <div class="section-header">
             <span class="section-icon">🚀</span>
-            <h2>Featured Projects</h2>
+            <h2>Projects</h2>
         </div>
+        <div class="project-list">
         ${portfolioData.projects.map(project => `
             <div class="project-card">
-                <h3>${project.name}</h3>
-                <p>${project.description}</p>
-                <p class="tech-tag"><strong>Technologies:</strong> ${project.technologies}</p>
-                <div class="link-buttons">
-                    <a href="${project.live}" target="_blank" class="btn-link">Live Demo ↗</a>
-                    <a href="${project.github}" target="_blank" class="btn-link btn-secondary">GitHub ↗</a>
+                <div class="project-title"><strong>${project.name}</strong></div>
+                <div class="project-desc">${project.description}</div>
+                <div class="project-tech"><strong>Technologies:</strong> ${project.technologies}</div>
+                <div class="project-links">
+                    ${project.live ? `<a href="${project.live}" target="_blank" class="btn-link">Live ↗</a>` : ''}
+                    ${project.github ? `<a href="${project.github}" target="_blank" class="btn-link btn-secondary">GitHub ↗</a>` : ''}
                 </div>
             </div>
         `).join('')}
-        ${cvButtons}
+        </div>
     `,
     
     // Education
@@ -294,17 +323,18 @@ const responses = {
         ${cvButtons}
     `,
     
-    // About / Summary
+    // About / Summary (concise, structured, under 6 lines)
     about: () => `
         <div class="section-header">
             <span class="section-icon">👤</span>
             <h2>About Muhammad Danish</h2>
         </div>
-        <p>Muhammad Danish is a motivated <strong>Mathematics undergraduate</strong> specializing in <strong>data analysis</strong> and <strong>web development</strong>.</p>
-        <p style="margin-top: 12px;">He is skilled in Python, data visualization, and front-end technologies, with a strong conceptual foundation in applied mathematics and statistics. He is dedicated to building efficient solutions and applying technology to real-world problems.</p>
-        <p style="margin-top: 12px;"><strong>Location:</strong> Khanewal, Pakistan<br>
-        <strong>Phone:</strong> +92 326 7370173</p>
-        ${cvButtons}
+        <ul class="about-list">
+            <li><strong>Summary:</strong> Mathematics student specializing in AI, data analysis, and web development.</li>
+            <li><strong>Skills:</strong> Python, data visualization, web development, MySQL.</li>
+            <li><strong>Experience:</strong> Teaching, data analysis, web projects.</li>
+            <li><strong>Career Goals:</strong> Seeking internships in AI, Data Science, and Web Development.</li>
+        </ul>
     `,
     
     // Contact
@@ -368,25 +398,22 @@ const responses = {
         ${cvButtons}
     `,
     
-    // Hire
+    // Hire (concise, always includes email and portfolio)
     hire: () => `
         <div class="section-header">
             <span class="section-icon">💡</span>
             <h2>Why Hire Muhammad Danish?</h2>
         </div>
         <ul class="hire-list">
-            <li>📊 Strong analytical skills with Mathematics background</li>
-            <li>🐍 Proficient in Python for data analysis and automation</li>
-            <li>🌐 Web development skills (HTML, CSS, JavaScript)</li>
-            <li>🤖 AI fundamentals and chatbot development</li>
-            <li>📈 Data visualization and reporting abilities</li>
-            <li>💼 Teaching experience with strong communication skills</li>
-            <li>🎓 Certified professional (DigiSkills Pakistan)</li>
+            <li>Strong analytical and programming skills</li>
+            <li>Proficient in Python, data analysis, and web development</li>
+            <li>Experience in teaching and project delivery</li>
+            <li>Certified by DigiSkills Pakistan</li>
         </ul>
         <div class="cta-box">
-            <p>📩 Ready to hire? <strong>Contact him at muhaammaddanish2327@gmail.com</strong></p>
+            <p>Email: <a href="mailto:muhaammaddanish2327@gmail.com">muhaammaddanish2327@gmail.com</a></p>
+            <p>Portfolio: <a href="https://muhammaddanish-sage.vercel.app/" target="_blank">muhammaddanish-sage.vercel.app</a></p>
         </div>
-        ${cvButtons}
     `,
     
     // CV
@@ -553,27 +580,13 @@ const responses = {
         ${cvButtons}
     `,
     
-    // Default - for unrecognized questions
+    // Default - for unrecognized or unrelated questions
     default: (input) => `
         <div class="section-header">
             <span class="section-icon">💬</span>
-            <h2>Let Me Help You With That</h2>
+            <h2>Professional Notice</h2>
         </div>
-        <p>I understand you're asking about "<strong>${input}</strong>".</p>
-        <p style="margin-top: 12px;">Here are topics I can help you with:</p>
-        <ul class="hire-list">
-            <li>💼 Skills and expertise</li>
-            <li>🚀 Projects and work</li>
-            <li>🎓 Education background</li>
-            <li>💼 Work experience</li>
-            <li>🏆 Certifications</li>
-            <li>🛠️ Services offered</li>
-            <li>💡 Why hire him</li>
-            <li>📄 Download/View CV</li>
-            <li>📬 Contact information</li>
-        </ul>
-        <p class="summary-text">Please feel free to ask about any of these topics!</p>
-        ${cvButtons}
+        <p>I specialize in answering questions about Muhammad Danish’s professional profile, projects, and career.</p>
     `
 };
 
@@ -584,7 +597,9 @@ const userInput = document.getElementById('userInput');
 const clearBtn = document.getElementById('clearBtn');
 const quickBtns = document.querySelectorAll('.quick-btn');
 
+// =====================
 // Helper Functions
+// =====================
 function getTimestamp() {
     const now = new Date();
     return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -594,44 +609,37 @@ function scrollToBottom() {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
+// Create a chat message element (user or bot)
 function createMessageElement(content, isUser = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
-    
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
     contentDiv.innerHTML = content;
-    
     const timestamp = document.createElement('span');
     timestamp.className = 'timestamp';
     timestamp.textContent = isUser ? 'You' : getTimestamp();
-    
     messageDiv.appendChild(contentDiv);
     messageDiv.appendChild(timestamp);
-    
     return messageDiv;
 }
 
+// Create a typing indicator element (animated dots)
 function createTypingIndicator() {
     const typingDiv = document.createElement('div');
     typingDiv.className = 'message bot-message';
     typingDiv.id = 'typingIndicator';
-    
     const contentDiv = document.createElement('div');
     contentDiv.className = 'typing-indicator';
-    
     for (let i = 0; i < 3; i++) {
         const span = document.createElement('span');
         contentDiv.appendChild(span);
     }
-    
     const timestamp = document.createElement('span');
     timestamp.className = 'timestamp';
-    timestamp.textContent = 'Typing...';
-    
+    timestamp.textContent = 'Assistant is typing...';
     typingDiv.appendChild(contentDiv);
     typingDiv.appendChild(timestamp);
-    
     return typingDiv;
 }
 
@@ -765,6 +773,9 @@ function getBotResponse(input) {
     return responses.default(input);
 }
 
+// =====================
+// Chatbot Main Logic
+// =====================
 // Handle form submission
 function handleSubmit(e) {
     e.preventDefault();
@@ -793,7 +804,7 @@ function handleSubmit(e) {
     }, 800 + Math.random() * 700);
 }
 
-// Handle quick action buttons
+// Handle quick action buttons (suggestion chips)
 function handleQuickAction(e) {
     const question = e.target.dataset.question;
     if (question) {
@@ -802,7 +813,7 @@ function handleQuickAction(e) {
     }
 }
 
-// Handle clear chat
+// Handle clear chat (reset to welcome message)
 function handleClearChat() {
     chatMessages.innerHTML = `
         <div class="message bot-message">
@@ -821,7 +832,9 @@ function handleClearChat() {
     scrollToBottom();
 }
 
+// =====================
 // Event Listeners
+// =====================
 chatForm.addEventListener('submit', handleSubmit);
 
 quickBtns.forEach(btn => {
@@ -830,8 +843,7 @@ quickBtns.forEach(btn => {
 
 clearBtn.addEventListener('click', handleClearChat);
 
-// Initialize
-
+// Initialize scroll position
 scrollToBottom();
 
 // === Advanced Chatbot Functionalities ===
@@ -944,11 +956,19 @@ scrollToBottom = function() {
     setTimeout(addFeedbackAndSuggestions, 200);
 };
 
-// 4. Dark Mode Toggle
+// 4. Dark Mode Toggle (moved to top right inside chat container)
 const darkToggle = document.createElement('button');
 darkToggle.textContent = '🌙 Dark Mode';
-darkToggle.style = 'position:fixed;bottom:24px;right:24px;z-index:1000;padding:10px 18px;background:#222;color:#fff;border:none;border-radius:8px;font-size:15px;box-shadow:0 2px 8px #0002;cursor:pointer;';
-document.body.appendChild(darkToggle);
+darkToggle.className = 'dark-toggle-btn';
+let chatContainer = document.querySelector('.chat-container');
+if (chatContainer) {
+    chatContainer.appendChild(darkToggle);
+    darkToggle.style = 'position:absolute;top:18px;right:18px;z-index:1000;padding:10px 18px;background:#222;color:#fff;border:none;border-radius:8px;font-size:15px;box-shadow:0 2px 8px #0002;cursor:pointer;';
+} else {
+    // fallback to body if chat container not found
+    darkToggle.style = 'position:fixed;top:18px;right:18px;z-index:1000;padding:10px 18px;background:#222;color:#fff;border:none;border-radius:8px;font-size:15px;box-shadow:0 2px 8px #0002;cursor:pointer;';
+    document.body.appendChild(darkToggle);
+}
 let dark = false;
 darkToggle.onclick = () => {
     dark = !dark;
