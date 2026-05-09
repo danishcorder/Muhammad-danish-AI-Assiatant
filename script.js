@@ -1,982 +1,438 @@
-// ===== Portfolio Chatbot - JavaScript =====
+/* ============================================================= */
+/* MUHAMMAD DANISH AI - PORTFOLIO ASSISTANT                      */
+/* ============================================================= */
 
-// Portfolio Data
 const portfolioData = {
     name: "Muhammad Danish",
-    field: "Mathematics Student | Data Analysis | Web Development | AI Projects",
     email: "muhaammaddanish2327@gmail.com",
     phone: "+92 326 7370173",
     location: "Khanewal, Pakistan",
     portfolio: "https://muhammaddanish-sage.vercel.app/",
     github: "https://github.com/danishcorder",
-    cv: "Muhammadanish.CV",
-    
+    cv: "Muhammaddanish.CV.pdf",
     skills: [
-        {
-            name: "Python",
-            description: "Proficient in Python for data analysis, automation, and web development. Experienced with Pandas, NumPy, and Matplotlib."
-        },
-        {
-            name: "Data Analysis",
-            description: "Skilled in analyzing datasets, creating visualizations, and generating actionable insights using Python and Excel."
-        },
-        {
-            name: "Data Visualization",
-            description: "Capable of presenting data through charts, dashboards, and interactive visualizations."
-        },
-        {
-            name: "Web Development",
-            description: "Building responsive websites using HTML, CSS, and JavaScript with focus on user experience."
-        },
-        {
-            name: "MySQL",
-            description: "Experienced in database management, queries, and DBMS operations."
-        },
-        {
-            name: "AI Fundamentals",
-            description: "Understanding of AI concepts, machine learning basics, and chatbot development."
-        },
-        {
-            name: "Git & GitHub",
-            description: "Version control and collaborative development workflows."
-        },
-        {
-            name: "MS Office",
-            description: "Proficient in Excel, Word, PowerPoint for data handling and presentations."
-        }
+        { name: "Python", description: "Proficient in Python for data analysis, automation, and web development." },
+        { name: "Data Analysis", description: "Skilled in analyzing datasets and generating actionable insights." },
+        { name: "Web Development", description: "Building responsive websites with HTML, CSS, JavaScript." },
+        { name: "MySQL", description: "Experienced in database management and queries." },
+        { name: "AI Fundamentals", description: "Understanding of AI concepts and chatbot development." }
     ],
-    
     projects: [
-        {
-            name: "Portfolio Website",
-            description: "Personal portfolio showcasing skills, projects, and achievements. Designed and deployed using HTML, CSS, JavaScript, and Vercel.",
-            technologies: "HTML, CSS, JavaScript, Vercel",
-            live: "https://muhammaddanish-sage.vercel.app/",
-            github: "https://github.com/danishcorder"
-        },
-        {
-            name: "Web Development Projects",
-            description: "Developed responsive and accessible websites emphasizing user experience and performance.",
-            technologies: "HTML, CSS, JavaScript",
-            live: "https://muhammaddanish-sage.vercel.app/",
-            github: "https://github.com/danishcorder"
-        },
-        {
-            name: "Data Analysis Projects",
-            description: "Performed exploratory data analysis and visualization using structured datasets.",
-            technologies: "Python, MS Excel, MySQL",
-            live: "https://muhammaddanish-sage.vercel.app/",
-            github: "https://github.com/danishcorder"
-        },
-        {
-            name: "Database Management System",
-            description: "A web-based database management system project with CRUD operations and user-friendly interface.",
-            technologies: "HTML, CSS, JavaScript",
-            live: "https://danishcorder.github.io/DatabaseManagment/index.html",
-            github: "https://github.com/danishcorder/DatabaseManagment"
-        },
-        {
-            name: "Top 2025 Level Site",
-            description: "A modern, visually impressive website demonstrating advanced front-end techniques and UI/UX best practices.",
-            technologies: "HTML, CSS, JavaScript",
-            live: "https://danishcorder.github.io/Top-2025-level-site/",
-            github: "https://github.com/danishcorder/Top-2025-level-site/"
-        },
-        {
-            name: "World Wonders",
-            description: "An interactive site showcasing the wonders of the world with engaging visuals and information.",
-            technologies: "HTML, CSS, JavaScript",
-            live: "https://danishcorder.github.io/World-Wonders/",
-            github: "https://github.com/danishcorder/World-Wonders"
-        },
-        {
-            name: "Data Dashboard ",
-            description: "A data dashboard web app for visualizing and analyzing datasets in a clean, modern interface.",
-            technologies: "HTML, CSS, JavaScript",
-            live: "https://danishcorder.github.io/DatadashBoard2/",
-            github: "https://github.com/danishcorder/DatadashBoard2/"
-        }
+        { name: "Portfolio Website", description: "Personal portfolio on Vercel.", live: "https://muhammaddanish-sage.vercel.app/", github: "https://github.com/danishcorder" },
+        { name: "DB Management", description: "Web-based CRUD operations.", live: "https://danishcorder.github.io/DatabaseManagment/index.html", github: "https://github.com/danishcorder/DatabaseManagment" },
+        { name: "Top 2025 Site", description: "Modern front-end techniques.", live: "https://danishcorder.github.io/Top-2025-level-site/", github: "https://github.com/danishcorder/Top-2025-level-site/" },
+        { name: "Data Dashboard", description: "Visualizing and analyzing datasets.", live: "https://danishcorder.github.io/DatadashBoard2/", github: "https://github.com/danishcorder/DatadashBoard2/" }
     ],
-    
-    services: [
-        {
-            name: "Data Analysis & Visualization",
-            description: "Provides actionable insights by analyzing datasets, creating visualizations, and generating comprehensive reports using Python, Excel, and MySQL."
-        },
-        {
-            name: "Web Development",
-            description: "Develops responsive and user-friendly websites using HTML, CSS, and JavaScript with modern design principles."
-        },
-        {
-            name: "Python Scripting & Automation",
-            description: "Creates efficient Python scripts to automate tasks, process data, and improve workflow efficiency."
-        },
-        {
-            name: "Chatbot Development",
-            description: "Builds AI-powered conversational agents and chatbots for automation and customer service applications."
-        }
-    ],
-    
     education: [
-        {
-            degree: "BS Mathematics",
-            institution: "Bahauddin Zakariya University, Multan",
-            year: "2023 – Present"
-        },
-        {
-            degree: "Intermediate (ICS)",
-            institution: "Punjab Group of Colleges, Kabirwala",
-            year: "2021 – 2023",
-            marks: "82%"
-        },
-        {
-            degree: "Matriculation (Science)",
-            institution: "Khanewal",
-            year: "2019 – 2021",
-            marks: "98%"
-        }
+        { degree: "BS Mathematics", institution: "BZU, Multan", year: "2023 – Present" },
+        { degree: "Intermediate (ICS)", institution: "PGC, Kabirwala", year: "2021 – 2023", marks: "82%" },
+        { degree: "Matriculation", institution: "Khanewal", year: "2019 – 2021", marks: "98%" }
     ],
-    
-    experience: [
-        {
-            title: "Mathematics Teacher",
-            company: "Private Academy",
-            year: "2022 – 2023",
-            responsibilities: [
-                "Taught mathematics using digital tools and interactive methods",
-                "Designed analytical exercises for students",
-                "Maintained high student engagement",
-                "Used technology for visualization and assessment"
-            ],
-        }
-    ],
-    
     certifications: [
-        {
-            name: "Freelancing Course",
-            issuer: "DigiSkills Pakistan",
-            year: "2024"
-        },
-        {
-            name: "MS Excel Certification",
-            issuer: "DigiSkills Pakistan",
-            year: "2023 – 2024"
-        },
-        {
-            name: "Python Programming",
-            issuer: "DigiSkills Pakistan",
-            year: "2024 – 2025"
-        }
-    ],
-    
-    languages: [
-        { language: "English", level: "Fluent" },
-        { language: "Urdu", level: "Fluent" },
-        { language: "Chinese", level: "Basic" }
-    ],
-    softSkills: [
-        "Problem Solving",
-        "Critical Thinking",
-        "Creativity",
-        "Teaching",
-        "Communication"
-    ],
-    
-    goals: "Seeking internships in AI, Data Science, and Web Development"
+        { name: "Freelancing Course", issuer: "DigiSkills", year: "2024" },
+        { name: "MS Excel", issuer: "DigiSkills", year: "2023-2024" },
+        { name: "Python Programming", issuer: "DigiSkills", year: "2024-2025" }
+    ]
 };
 
-// Contact footer for all responses
-const contactFooter = `
-    <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #E2E8F0;">
-        <p style="font-size: 11px; color: #64748B; margin-bottom: 6px;">📬 Get in touch:</p>
-        <p style="font-size: 12px;">
-            <a href="mailto:muhaammaddanish2327@gmail.com" style="color: #3B82F6; text-decoration: none; margin-right: 12px;">✉️ muhaammaddanish2327@gmail.com</a>
-            <a href="https://muhammaddanish-sage.vercel.app/" target="_blank" style="color: #3B82F6; text-decoration: none;">🌐 muhammaddanish-sage.vercel.app</a>
-        </p>
-    </div>
-`;
-
-// CV Download Button
-const cvButtons = `
-    <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #E2E8F0; display: flex; gap: 10px; flex-wrap: wrap;">
-        <a href="Muhammaddanish.CV.pdf" download="Muhammad_Danish_CV.pdf" style="padding: 8px 16px; background: #3B82F6; color: white; text-decoration: none; border-radius: 8px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-            📥 Download CV
-        </a>
-        <a href="Muhammaddanish.CV.pdf" target="_blank" style="padding: 8px 16px; background: #10B981; color: white; text-decoration: none; border-radius: 8px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-            👁️ View CV
-        </a>
-    </div>
-`;
-
-// Chat Responses
-const responses = {
-    // Skills
-    skills: () => `
-        <div class="section-header">
-            <span class="section-icon">💼</span>
-            <h2>Technical Skills</h2>
-        </div>
-        ${portfolioData.skills.map(skill => `
-            <div class="skill-card">
-                <h3>${skill.name}</h3>
-                <p>${skill.description}</p>
-            </div>
-        `).join('')}
-        <p class="summary-text">Muhammad Danish has applied these skills in various projects, demonstrating strong analytical and programming abilities.</p>
-        ${cvButtons}
-    `,
-    
-    // Projects (concise, structured, recruiter-friendly)
-    projects: () => `
-        <div class="section-header">
-            <span class="section-icon">🚀</span>
-            <h2>Projects</h2>
-        </div>
-        <div class="project-list">
-        ${portfolioData.projects.map(project => `
-            <div class="project-card">
-                <div class="project-title"><strong>${project.name}</strong></div>
-                <div class="project-desc">${project.description}</div>
-                <div class="project-tech"><strong>Technologies:</strong> ${project.technologies}</div>
-                <div class="project-links">
-                    ${project.live ? `<a href="${project.live}" target="_blank" class="btn-link">Live ↗</a>` : ''}
-                    ${project.github ? `<a href="${project.github}" target="_blank" class="btn-link btn-secondary">GitHub ↗</a>` : ''}
-                </div>
-            </div>
-        `).join('')}
-        </div>
-    `,
-    
-    // Education
-    education: () => `
-        <div class="section-header">
-            <span class="section-icon">🎓</span>
-            <h2>Education</h2>
-        </div>
-        ${portfolioData.education.map(edu => `
-            <div class="skill-card" style="border-left: 3px solid #3b82f6;">
-                <h3>${edu.degree}</h3>
-                <p>${edu.institution}</p>
-                <p style="color: #64748B; font-size: 12px;">${edu.year}${edu.marks ? ' • ' + edu.marks : ''}</p>
-            </div>
-        `).join('')}
-        ${cvButtons}
-    `,
-    
-    // Experience
-    experience: () => `
-        <div class="section-header">
-            <span class="section-icon">💼</span>
-            <h2>Work Experience</h2>
-        </div>
-        ${portfolioData.experience.map(exp => `
-            <div class="skill-card" style="border-left: 3px solid #10B981;">
-                <h3>${exp.title}</h3>
-                <p>${exp.company} • ${exp.year}</p>
-                <ul style="margin-top: 8px; padding-left: 16px; color: #64748B; font-size: 12px;">
-                    ${exp.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
-                </ul>
-            </div>
-        `).join('')}
-        ${cvButtons}
-    `,
-    
-    // Certifications
-    certifications: () => `
-        <div class="section-header">
-            <span class="section-icon">🏆</span>
-            <h2>Certifications</h2>
-        </div>
-        ${portfolioData.certifications.map(cert => `
-            <div class="skill-card" style="border-left: 3px solid #F59E0B;">
-                <h3>${cert.name}</h3>
-                <p>${cert.issuer} • ${cert.year}</p>
-            </div>
-        `).join('')}
-        ${cvButtons}
-    `,
-    
-    // Languages
-    languages: () => `
-        <div class="section-header">
-            <span class="section-icon">🌍</span>
-            <h2>Languages</h2>
-        </div>
-        ${portfolioData.languages.map(lang => `
-            <div class="skill-card">
-                <h3>${lang.language}</h3>
-                <p>${lang.level}</p>
-            </div>
-        `).join('')}
-        ${cvButtons}
-    `,
-    
-    // Soft Skills
-    softSkills: () => `
-        <div class="section-header">
-            <span class="section-icon">💪</span>
-            <h2>Soft Skills</h2>
-        </div>
-        <ul class="hire-list">
-            ${portfolioData.softSkills.map(skill => `<li>✨ ${skill}</li>`).join('')}
-        </ul>
-        ${cvButtons}
-    `,
-    
-    // About / Summary (concise, structured, under 6 lines)
-    about: () => `
-        <div class="section-header">
-            <span class="section-icon">👤</span>
-            <h2>About Muhammad Danish</h2>
-        </div>
-        <ul class="about-list">
-            <li><strong>Summary:</strong> Mathematics student specializing in AI, data analysis, and web development.</li>
-            <li><strong>Skills:</strong> Python, data visualization, web development, MySQL.</li>
-            <li><strong>Experience:</strong> Teaching, data analysis, web projects.</li>
-            <li><strong>Career Goals:</strong> Seeking internships in AI, Data Science, and Web Development.</li>
-        </ul>
-    `,
-    
-    // Contact
-    contact: () => `
-        <div class="section-header">
-            <span class="section-icon">📬</span>
-            <h2>Contact Information</h2>
-        </div>
-        <div class="contact-card">
-            <div class="contact-item">
-                <span class="contact-icon">📧</span>
-                <div>
-                    <strong>Email</strong>
-                    <a href="mailto:muhaammaddanish2327@gmail.com">muhaammaddanish2327@gmail.com</a>
-                </div>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">📱</span>
-                <div>
-                    <strong>Phone</strong>
-                    <a href="tel:+923267370173">+92 326 7370173</a>
-                </div>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">📍</span>
-                <div>
-                    <strong>Location</strong>
-                    <span>Khanewal, Pakistan</span>
-                </div>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">💻</span>
-                <div>
-                    <strong>GitHub</strong>
-                    <a href="https://github.com/danishcorder" target="_blank">github.com/danishcorder</a>
-                </div>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">🌐</span>
-                <div>
-                    <strong>Portfolio</strong>
-                    <a href="https://muhammaddanish-sage.vercel.app/" target="_blank">muhammaddanish-sage.vercel.app</a>
-                </div>
-            </div>
-        </div>
-        ${cvButtons}
-    `,
-    
-    // Services
-    services: () => `
-        <div class="section-header">
-            <span class="section-icon">🛠️</span>
-            <h2>Services Offered</h2>
-        </div>
-        ${portfolioData.services.map(service => `
-            <div class="service-card">
-                <h3>${service.name}</h3>
-                <p>${service.description}</p>
-            </div>
-        `).join('')}
-        ${cvButtons}
-    `,
-    
-    // Hire (concise, always includes email and portfolio)
-    hire: () => `
-        <div class="section-header">
-            <span class="section-icon">💡</span>
-            <h2>Why Hire Muhammad Danish?</h2>
-        </div>
-        <ul class="hire-list">
-            <li>Strong analytical and programming skills</li>
-            <li>Proficient in Python, data analysis, and web development</li>
-            <li>Experience in teaching and project delivery</li>
-            <li>Certified by DigiSkills Pakistan</li>
-        </ul>
-        <div class="cta-box">
-            <p>Email: <a href="mailto:muhaammaddanish2327@gmail.com">muhaammaddanish2327@gmail.com</a></p>
-            <p>Portfolio: <a href="https://muhammaddanish-sage.vercel.app/" target="_blank">muhammaddanish-sage.vercel.app</a></p>
-        </div>
-    `,
-    
-    // CV
-    cv: () => `
-        <div class="section-header">
-            <span class="section-icon">📄</span>
-            <h2>CV / Resume</h2>
-        </div>
-        <p>You can download or view Muhammad Danish's CV below:</p>
-        ${cvButtons}
-        <div style="margin-top: 16px;">
-            <h3 style="font-size: 14px; margin-bottom: 12px;">Quick Overview:</h3>
-            <ul class="hire-list">
-                <li>📧 muhaammaddanish2327@gmail.com</li>
-                <li>📱 +92 326 7370173</li>
-                <li>📍 Khanewal, Pakistan</li>
-                <li>🎓 BS Mathematics (Bahauddin Zakariya University)</li>
-                <li>💼 Mathematics Teacher (Private Academy 2022-2023)</li>
-                <li>🏆 Certified by DigiSkills Pakistan</li>
-            </ul>
-        </div>
-        ${cvButtons}
-    `,
-    
-    // Greeting
-    greeting: () => `
-        <div class="section-header">
-            <span class="section-icon">👋</span>
-            <h2>Welcome!</h2>
-        </div>
-        <p>Hello! Welcome to Muhammad Danish's AI Portfolio Assistant. 🤖</p>
-        <p style="margin-top: 12px;">I can help you learn about his <strong>skills</strong>, <strong>projects</strong>, <strong>education</strong>, <strong>experience</strong>, <strong>certifications</strong>, and more.</p>
-        <p style="margin-top: 12px;">Feel free to ask anything or use the quick buttons below!</p>
-        ${cvButtons}
-    `,
-    
-    // Thanks
-    thanks: () => `
-        <div class="section-header">
-            <span class="section-icon">😊</span>
-            <h2>You're Welcome!</h2>
-        </div>
-        <p>Thank you so much for your interest in Muhammad Danish's profile! 🙏</p>
-        <p style="margin-top: 12px;">I'm happy I could help. Feel free to download his CV or contact him for opportunities!</p>
-        <p class="summary-text">Is there anything else you'd like to know?</p>
-        ${cvButtons}
-    `,
-    
-    // Goodbye
-    goodbye: () => `
-        <div class="section-header">
-            <span class="section-icon">👋</span>
-            <h2>Goodbye!</h2>
-        </div>
-        <p>Thank you for visiting! 😊 Have a wonderful day!</p>
-        <p style="margin-top: 12px;">Best regards! 📬 muhaammaddanish2327@gmail.com</p>
-        ${cvButtons}
-    `,
-    
-    // Help
-    help: () => `
-        <div class="section-header">
-            <span class="section-icon">💡</span>
-            <h2>How Can I Help You?</h2>
-        </div>
-        <p>I'm Muhammad Danish's AI portfolio assistant! Here's what I can help you with:</p>
-        <ul class="hire-list">
-            <li>💼 <strong>Skills</strong> - Technical expertise</li>
-            <li>🚀 <strong>Projects</strong> - Portfolio work</li>
-            <li>🎓 <strong>Education</strong> - Academic background</li>
-            <li>💼 <strong>Experience</strong> - Work history</li>
-            <li>🏆 <strong>Certifications</strong> - Professional certifications</li>
-            <li>🛠️ <strong>Services</strong> - What he offers</li>
-            <li>💡 <strong>Hire Me</strong> - Why hire him</li>
-            <li>📄 <strong>CV/Resume</strong> - Download or view his CV</li>
-            <li>📬 <strong>Contact</strong> - Get in touch</li>
-        </ul>
-        ${cvButtons}
-    `,
-    
-    // Who are you
-    whoAreYou: () => `
-        <div class="section-header">
-            <span class="section-icon">🤖</span>
-            <h2>About This Chatbot</h2>
-        </div>
-        <p>I'm an AI-powered virtual assistant representing <strong>Muhammad Danish</strong>!</p>
-        <p style="margin-top: 12px;">I can provide comprehensive information about his skills, projects, education, experience, certifications, and help you get in touch with him.</p>
-        ${cvButtons}
-    `,
-    
-    // Career / Goals
-    career: () => `
-        <div class="section-header">
-            <span class="section-icon">🎯</span>
-            <h2>Career Goals</h2>
-        </div>
-        <p>Muhammad Danish is currently seeking <strong>internships</strong> in the following fields:</p>
-        <ul class="hire-list">
-            <li>🤖 Artificial Intelligence (AI)</li>
-            <li>📊 Data Science</li>
-            <li>🌐 Web Development</li>
-        </ul>
-        <p style="margin-top: 12px;">He aims to apply his skills in Python, data analysis, and web development to real-world projects while continuing to grow professionally.</p>
-        <div class="cta-box">
-            <p>📩 Interested? <strong>Contact him at muhaammaddanish2327@gmail.com</strong></p>
-        </div>
-        ${cvButtons}
-    `,
-    
-    // Freelancing
-    freelancing: () => `
-        <div class="section-header">
-            <span class="section-icon">💼</span>
-            <h2>Freelancing</h2>
-        </div>
-        <p>Muhammad Danish has completed a <strong>Freelancing Course</strong> from DigiSkills Pakistan (2024).</p>
-        <p style="margin-top: 12px;">He is open to freelance projects in:</p>
-        <ul class="hire-list">
-            <li>📊 Data Analysis & Visualization</li>
-            <li>🌐 Web Development</li>
-            <li>🐍 Python Scripting & Automation</li>
-            <li>🤖 Chatbot Development</li>
-        </ul>
-        <p class="summary-text">Feel free to contact him for freelance opportunities!</p>
-        ${cvButtons}
-    `,
-    
-    // Strengths
-    strengths: () => `
-        <div class="section-header">
-            <span class="section-icon">💪</span>
-            <h2>Key Strengths</h2>
-        </div>
-        <ul class="hire-list">
-            <li>📊 Strong analytical and problem-solving skills</li>
-            <li>🐍 Proficient in Python programming</li>
-            <li>📈 Data analysis and visualization expertise</li>
-            <li>🌐 Web development capabilities</li>
-            <li>🤖 AI fundamentals and chatbot development</li>
-            <li>💼 Teaching experience with excellent communication</li>
-            <li>🎓 Certified by DigiSkills Pakistan</li>
-            <li>📚 Strong foundation in Mathematics and Statistics</li>
-        </ul>
-        ${cvButtons}
-    `,
-    
-    // Availability
-    availability: () => `
-        <div class="section-header">
-            <span class="section-icon">✅</span>
-            <h2>Availability</h2>
-        </div>
-        <p>Muhammad Danish is currently available for:</p>
-        <ul class="hire-list">
-            <li>📚 <strong>Internships</strong> in AI, Data Science, or Web Development</li>
-            <li>💻 <strong>Freelance projects</strong> in data analysis and web development</li>
-            <li>🤝 <strong>Collaboration</strong> on tech projects</li>
-        </ul>
-        <p style="margin-top: 12px;">He is a quick learner and eager to contribute to meaningful projects.</p>
-        <div class="cta-box">
-            <p>📩 Reach out: <strong>muhaammaddanish2327@gmail.com</strong></p>
-        </div>
-        ${cvButtons}
-    `,
-    
-    // Default - for unrecognized or unrelated questions
-    default: (input) => `
-        <div class="section-header">
-            <span class="section-icon">💬</span>
-            <h2>Professional Notice</h2>
-        </div>
-        <p>I specialize in answering questions about Muhammad Danish’s professional profile, projects, and career.</p>
-    `
+const DOM = {
+    loadingScreen: document.getElementById('loadingScreen'),
+    cursorGlow: document.getElementById('cursorGlow'),
+    bgCanvas: document.getElementById('bgCanvas'),
+    themeToggle: document.getElementById('themeToggle'),
+    typingEffect: document.getElementById('typingEffect'),
+    chatMessages: document.getElementById('chatMessages'),
+    userInput: document.getElementById('userInput'),
+    sendBtn: document.getElementById('sendBtn'),
+    clearChatBtn: document.getElementById('clearChatBtn'),
+    voiceInputBtn: document.getElementById('voiceInputBtn'),
+    voiceVisualizer: document.getElementById('voiceVisualizer'),
+    thinkingOverlay: document.getElementById('thinkingOverlay'),
+    quickChips: document.querySelectorAll('.quick-chip'),
+    mathInput: document.getElementById('mathInput'),
+    solveBtn: document.getElementById('solveBtn'),
+    clearMathBtn: document.getElementById('clearMathBtn'),
+    mathOutput: document.getElementById('mathOutput'),
+    graphCanvas: document.getElementById('graphCanvas'),
+    mathSteps: document.getElementById('mathSteps'),
+    outputTabs: document.querySelectorAll('.output-tab'),
+    exampleChips: document.querySelectorAll('.example-chip'),
+    latencyDisplay: document.getElementById('latencyDisplay'),
+    statNumbers: document.querySelectorAll('.stat-number'),
 };
 
-// DOM Elements
-const chatMessages = document.getElementById('chatMessages');
-const chatForm = document.getElementById('chatForm');
-const userInput = document.getElementById('userInput');
-const clearBtn = document.getElementById('clearBtn');
-const quickBtns = document.querySelectorAll('.quick-btn');
-
-// =====================
-// Helper Functions
-// =====================
-function getTimestamp() {
-    const now = new Date();
-    return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-}
-
-function scrollToBottom() {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-// Create a chat message element (user or bot)
-function createMessageElement(content, isUser = false) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
-    const contentDiv = document.createElement('div');
-    contentDiv.className = 'message-content';
-    contentDiv.innerHTML = content;
-    const timestamp = document.createElement('span');
-    timestamp.className = 'timestamp';
-    timestamp.textContent = isUser ? 'You' : getTimestamp();
-    messageDiv.appendChild(contentDiv);
-    messageDiv.appendChild(timestamp);
-    return messageDiv;
-}
-
-// Create a typing indicator element (animated dots)
-function createTypingIndicator() {
-    const typingDiv = document.createElement('div');
-    typingDiv.className = 'message bot-message';
-    typingDiv.id = 'typingIndicator';
-    const contentDiv = document.createElement('div');
-    contentDiv.className = 'typing-indicator';
-    for (let i = 0; i < 3; i++) {
-        const span = document.createElement('span');
-        contentDiv.appendChild(span);
-    }
-    const timestamp = document.createElement('span');
-    timestamp.className = 'timestamp';
-    timestamp.textContent = 'Assistant is typing...';
-    typingDiv.appendChild(contentDiv);
-    typingDiv.appendChild(timestamp);
-    return typingDiv;
-}
-
-function removeTypingIndicator() {
-    const indicator = document.getElementById('typingIndicator');
-    if (indicator) {
-        indicator.remove();
-    }
-}
-
-// Get Response based on user input
-function getBotResponse(input) {
-    const lowerInput = input.toLowerCase();
-    
-    // CV / Resume related
-    if (lowerInput.includes('cv') || lowerInput.includes('resume') || lowerInput.includes('download cv') || lowerInput.includes('view cv') || lowerInput.includes('download resume')) {
-        return responses.cv();
-    }
-    
-    // Skills
-    if (lowerInput.includes('skill')) {
-        return responses.skills();
-    }
-    
-    // Projects
-    if (lowerInput.includes('project')) {
-        return responses.projects();
-    }
-    
-    // Education
-    if (lowerInput.includes('education') || lowerInput.includes('study') || lowerInput.includes('university') || lowerInput.includes('degree') || lowerInput.includes('college') || lowerInput.includes('matric') || lowerInput.includes('intermediate')) {
-        return responses.education();
-    }
-    
-    // Experience
-    if (lowerInput.includes('experience') || lowerInput.includes('job') || lowerInput.includes('work') || lowerInput.includes('teacher') || lowerInput.includes('teaching')) {
-        return responses.experience();
-    }
-    
-    // Certifications
-    if (lowerInput.includes('certification') || lowerInput.includes('certificate') || lowerInput.includes('digiskill')) {
-        return responses.certifications();
-    }
-    
-    // Languages
-    if (lowerInput.includes('language') || lowerInput.includes('speak')) {
-        return responses.languages();
-    }
-    
-    // Soft Skills
-    if (lowerInput.includes('soft skill') || lowerInput.includes('soft skills')) {
-        return responses.softSkills();
-    }
-    
-    // Name
-    if (lowerInput.includes('your name') || lowerInput.includes('who are you') || lowerInput.includes('what are you') || lowerInput.includes("what's your name")) {
-        return responses.whoAreYou();
-    }
-    
-    // Career / Goals / Internships
-    if (lowerInput.includes('career') || lowerInput.includes('goal') || lowerInput.includes('internship') || lowerInput.includes('intern') || lowerInput.includes('looking for')) {
-        return responses.career();
-    }
-    
-    // Freelancing
-    if (lowerInput.includes('freelance') || lowerInput.includes('freelancing')) {
-        return responses.freelancing();
-    }
-    
-    // Strengths
-    if (lowerInput.includes('strength') || lowerInput.includes('strengths') || lowerInput.includes('best')) {
-        return responses.strengths();
-    }
-    
-    // Availability
-    if (lowerInput.includes('available') || lowerInput.includes('availability') || lowerInput.includes('can you work')) {
-        return responses.availability();
-    }
-    
-    // Services
-    if (lowerInput.includes('service') || lowerInput.includes('offer')) {
-        return responses.services();
-    }
-    
-    // Hire
-    if (lowerInput.includes('hire') || lowerInput.includes('employ') || lowerInput.includes('why')) {
-        return responses.hire();
-    }
-    
-    // Contact
-    if (lowerInput.includes('contact') || lowerInput.includes('reach') || lowerInput.includes('email') || lowerInput.includes('phone') || lowerInput.includes('linkedin')) {
-        return responses.contact();
-    }
-    
-    // About
-    if (lowerInput.includes('about') || lowerInput.includes('who') || lowerInput.includes('background') || lowerInput.includes('introduce')) {
-        return responses.about();
-    }
-    
-    // Phone / Number
-    if (lowerInput.includes('phone') || lowerInput.includes('number') || lowerInput.includes('call')) {
-        return responses.contact();
-    }
-    
-    // Location
-    if (lowerInput.includes('location') || lowerInput.includes('city') || lowerInput.includes('Pakistan') || lowerInput.includes('khanewal')) {
-        return responses.contact();
-    }
-    
-    // Greetings
-    if (lowerInput.includes('hi') || lowerInput.includes('hello') || lowerInput.includes('hey') || lowerInput.includes('greetings')) {
-        return responses.greeting();
-    }
-    
-    // Thanks
-    if (lowerInput.includes('thank') || lowerInput.includes('thanks')) {
-        return responses.thanks();
-    }
-    
-    // Goodbye
-    if (lowerInput.includes('bye') || lowerInput.includes('goodbye') || lowerInput.includes('see you')) {
-        return responses.goodbye();
-    }
-    
-    // Help
-    if (lowerInput.includes('help') || lowerInput.includes('what can you do') || lowerInput.includes('capabilities')) {
-        return responses.help();
-    }
-    
-    // Default response
-    return responses.default(input);
-}
-
-// =====================
-// Chatbot Main Logic
-// =====================
-// Handle form submission
-function handleSubmit(e) {
-    e.preventDefault();
-    
-    const message = userInput.value.trim();
-    if (!message) return;
-    
-    const userMessage = createMessageElement(`<p>${message}</p>`, true);
-    chatMessages.appendChild(userMessage);
-    
-    userInput.value = '';
-    scrollToBottom();
-    
-    const typingIndicator = createTypingIndicator();
-    chatMessages.appendChild(typingIndicator);
-    scrollToBottom();
-    
-    setTimeout(() => {
-        removeTypingIndicator();
-        
-        const botResponse = getBotResponse(message);
-        const botMessage = createMessageElement(botResponse, false);
-        chatMessages.appendChild(botMessage);
-        
-        scrollToBottom();
-    }, 800 + Math.random() * 700);
-}
-
-// Handle quick action buttons (suggestion chips)
-function handleQuickAction(e) {
-    const question = e.target.dataset.question;
-    if (question) {
-        userInput.value = question;
-        handleSubmit(new Event('submit'));
-    }
-}
-
-// Handle clear chat (reset to welcome message)
-function handleClearChat() {
-    chatMessages.innerHTML = `
-        <div class="message bot-message">
-            <div class="message-content">
-                <div class="section-header">
-                    <span class="section-icon">👋</span>
-                    <h2>Welcome!</h2>
-                </div>
-                <p>Hi! I'm Muhammad Danish's AI Portfolio Assistant. I can help you learn about his <strong>skills</strong>, <strong>projects</strong>, <strong>education</strong>, <strong>experience</strong>, and more.</p>
-                <p>Feel free to ask me anything or use the quick buttons below!</p>
-                ${cvButtons}
-            </div>
-            <span class="timestamp">Just now</span>
-        </div>
-    `;
-    scrollToBottom();
-}
-
-// =====================
-// Event Listeners
-// =====================
-chatForm.addEventListener('submit', handleSubmit);
-
-quickBtns.forEach(btn => {
-    btn.addEventListener('click', handleQuickAction);
-});
-
-clearBtn.addEventListener('click', handleClearChat);
-
-// Initialize scroll position
-scrollToBottom();
-
-// === Advanced Chatbot Functionalities ===
-
-// 1. Context Memory (simple session memory)
 let chatHistory = [];
-function saveToHistory(user, message) {
-    chatHistory.push({ user, message, time: new Date() });
-    if (chatHistory.length > 50) chatHistory.shift(); // keep last 50
+let sessionStartTime = Date.now();
+let latestMathResult = null;
+
+function switchTab(tabId) {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tabId));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === `tab-${tabId}`));
 }
 
-// Enhance handleSubmit to save history
-const originalHandleSubmit = handleSubmit;
-handleSubmit = function(event) {
-    const userMsg = userInput.value.trim();
-    if (userMsg) saveToHistory('user', userMsg);
-    originalHandleSubmit.call(this, event);
-    // Save bot reply after DOM update
+function initTabSwitching() {
+    document.querySelectorAll('.nav-tab').forEach(tab => tab.addEventListener('click', () => switchTab(tab.dataset.tab)));
+    document.querySelectorAll('.tab-trigger').forEach(t => t.addEventListener('click', () => { if (t.dataset.tab) switchTab(t.dataset.tab); }));
+}
+
+const MathEngine = {
+    solveQuadratic(a, b, c) {
+        const d = b * b - 4 * a * c;
+        if (d < 0) {
+            const real = (-b / (2 * a)).toFixed(4);
+            const imag = (Math.sqrt(Math.abs(d)) / (2 * a)).toFixed(4);
+            return { roots: [`${real} + ${imag}i`, `${real} - ${imag}i`], discriminant: d.toFixed(4), steps: [`Equation: ${a}x² + ${b}x + ${c} = 0`, `Δ = ${d.toFixed(4)}`, `Δ < 0 → Complex roots`, `x₁ = ${real} + ${imag}i`, `x₂ = ${real} - ${imag}i`] };
+        }
+        const sd = Math.sqrt(d);
+        return { roots: [((-b + sd) / (2 * a)).toFixed(4), ((-b - sd) / (2 * a)).toFixed(4)], discriminant: d.toFixed(4), steps: [`Equation: ${a}x² + ${b}x + ${c} = 0`, `Δ = ${d.toFixed(4)}`, `√Δ = ${sd.toFixed(4)}`, `x₁ = ${((-b + sd) / (2 * a)).toFixed(4)}`, `x₂ = ${((-b - sd) / (2 * a)).toFixed(4)}`] };
+    },
+    derivative(e) {
+        const expr = e.toLowerCase().replace(/\s+/g, '');
+        if (expr.includes('sin(')) return { result: 'cos(x)', steps: ['d/dx sin(x) = cos(x)'] };
+        if (expr.includes('cos(')) return { result: '-sin(x)', steps: ['d/dx cos(x) = -sin(x)'] };
+        if (expr.includes('tan(')) return { result: 'sec²(x)', steps: ['d/dx tan(x) = sec²(x)'] };
+        const m = expr.match(/x\^(\d+)/);
+        if (m) { const n = parseInt(m[1]); return { result: `${n}x^${n-1}`, steps: [`d/dx x^${n} = ${n}x^${n-1}`] }; }
+        if (expr === 'x') return { result: '1', steps: ['d/dx x = 1'] };
+        if (/^\d+$/.test(expr)) return { result: '0', steps: [`d/dx ${expr} = 0`] };
+        return { result: 'Unable to compute', steps: ['Complex expression'] };
+    },
+    integral(e) {
+        const expr = e.toLowerCase().replace(/\s+/g, '');
+        if (expr.includes('sin(')) return { result: '-cos(x) + C', steps: ['∫ sin(x) dx = -cos(x) + C'] };
+        if (expr.includes('cos(')) return { result: 'sin(x) + C', steps: ['∫ cos(x) dx = sin(x) + C'] };
+        const m = expr.match(/x\^(\d+)/);
+        if (m) { const n = parseInt(m[1]); return { result: `x^${n+1}/${n+1} + C`, steps: [`∫ x^${n} dx = x^${n+1}/${n+1} + C`] }; }
+        if (expr === 'x') return { result: 'x²/2 + C', steps: ['∫ x dx = x²/2 + C'] };
+        if (expr === '1' || expr === 'dx') return { result: 'x + C', steps: ['∫ 1 dx = x + C'] };
+        return { result: 'Unable to compute', steps: ['Complex expression'] };
+    },
+    factor(expr) {
+        const e = expr.replace(/\s+/g, '');
+        const m = e.match(/x\^2\s*([+-]?\s*\d+)?x\s*([+-]?\s*\d+)?/);
+        if (m) {
+            const b = m[1] ? parseInt(m[1].replace(/\s+/g, '')) : 0;
+            const c = m[2] ? parseInt(m[2].replace(/\s+/g, '')) : 0;
+            for (let i = -Math.abs(c); i <= Math.abs(c); i++) {
+                if (i === 0) continue;
+                const j = c / i;
+                if (i + j === b && Number.isInteger(j)) return { result: `(x ${i >= 0 ? '+' : '-'} ${Math.abs(i)})(x ${j >= 0 ? '+' : '-'} ${Math.abs(j)})`, steps: [`Factors of ${c} summing to ${b}: ${i} × ${j} = ${c}`, `Roots: x = ${-i}, x = ${-j}`] };
+            }
+            return { result: 'Cannot factor with integers', steps: ['No integer factors found'] };
+        }
+        return { result: 'Format: factor x^2 + bx + c', steps: [] };
+    },
+    plotFunction(f, xMin, xMax) {
+        const points = [];
+        const step = (xMax - xMin) / 200;
+        for (let x = xMin; x <= xMax; x += step) {
+            try { const y = this.evalExpr(f, x); points.push({ x: x, y: isFinite(y) && y > -100 && y < 100 ? y : null }); }
+            catch { points.push({ x: x, y: null }); }
+        }
+        return points;
+    },
+    evalExpr(expr, x) {
+        let f = expr.toLowerCase().replace(/sin\(/g,'Math.sin(').replace(/cos\(/g,'Math.cos(').replace(/tan\(/g,'Math.tan(').replace(/sqrt\(/g,'Math.sqrt(').replace(/\^/g,'**').replace(/π|pi/g,Math.PI.toString());
+        f = f.replace(/x/g, `(${x})`);
+        return Function(`"use strict"; return (${f})`)();
+    },
+    solve(input) {
+        const text = input.trim();
+        const lower = text.toLowerCase();
+        if (lower.startsWith('plot ')) { const func = text.replace(/^plot\s+/i, '').replace(/^y\s*=\s*/i, ''); return { type: 'plot', func, points: this.plotFunction(func, -10, 10) }; }
+        if (lower.includes('[[')) {
+            const parts = text.split('*');
+            if (parts.length === 2) {
+                const m1 = parts[0].match(/\[\[(.*?)\],\[(.*?)\]\]/), m2 = parts[1].match(/\[\[(.*?)\],\[(.*?)\]\]/);
+                if (m1 && m2) {
+                    const a = m1[1].split(',').map(Number), b = m1[2].split(',').map(Number), c = m2[1].split(',').map(Number), d = m2[2].split(',').map(Number);
+                    if (![a,b,c,d].some(r => r.some(isNaN))) return { type: 'matrix', result: [[a[0]*c[0]+a[1]*c[1], a[0]*d[0]+a[1]*d[1]],[b[0]*c[0]+b[1]*c[1], b[0]*d[0]+b[1]*d[1]]], steps: ['Multiplication complete'] };
+                }
+            }
+            return { type: 'error', message: 'Use: [[1,2],[3,4]] * [[5,6],[7,8]]' };
+        }
+        if (lower.startsWith('factor ')) return { type: 'factor', ...this.factor(text.replace(/^factor\s+/i,'')) };
+        if (lower.startsWith('derivative of ') || lower.startsWith('derivative ')) return { type: 'derivative', ...this.derivative(text.replace(/^(derivative of|derivative)\s+/i,'')) };
+        if (lower.startsWith('integral of ') || lower.startsWith('integral ') || lower.startsWith('integrate ')) return { type: 'integral', ...this.integral(text.replace(/^(integral of|integral|integrate)\s+/i,'')) };
+        if (lower.includes('x^2') || lower.includes('x²')) {
+            const eq = lower.replace(/x²/g,'x^2').replace(/\s+/g,'');
+            const quadMatch = eq.match(/(-?\d*\.?\d*)x\^2([+-]?\d*\.?\d*)x([+-]?\d*\.?\d*)/);
+            if (quadMatch) { const a = quadMatch[1]===''||quadMatch[1]==='+'?1:quadMatch[1]==='-'?-1:parseFloat(quadMatch[1]); const bStr=quadMatch[2]; const b=bStr===''||bStr==='+'?1:bStr==='-'?-1:parseFloat(bStr)||0; const c=parseFloat(quadMatch[3])||0; return { type: 'quadratic', ...this.solveQuadratic(a,b,c) }; }
+        }
+        try { const r = this.evalExpr(text, 0); if (isFinite(r)) return { type: 'eval', result: r.toFixed(4) }; } catch {}
+        return { type: 'error', message: 'Try: x^2 - 4x + 3 = 0, derivative of sin(x), integral of x^2 dx, plot sin(x), factor x^2 + 5x + 6' };
+    }
+};
+
+function formatResponse(title, content) {
+    return `<div><strong>${title}</strong></div><div style="margin-top:4px">${content}</div>`;
+}
+
+function getBotResponse(input) {
+    const lower = input.toLowerCase().trim();
+    if (lower.includes('solve') || lower.includes('equation') || lower.includes('derivative') || lower.includes('integral') || lower.includes('factor') || lower.includes('matrix') || lower.includes('plot') || lower.includes('x^2') || lower.includes('x²')) {
+        const r = MathEngine.solve(lower.replace(/^(solve|calculate|compute)\s+/i,'') || input);
+        if (r.type === 'error') return formatResponse('Math Error', r.message);
+        if (r.type === 'quadratic') return formatResponse('Quadratic', `x₁ = ${r.roots[0]}, x₂ = ${r.roots[1]}`);
+        if (r.type === 'derivative' || r.type === 'integral') return formatResponse(r.type, r.result);
+        if (r.type === 'factor') return formatResponse('Factor', r.result);
+        if (r.type === 'eval') return formatResponse('Result', r.result);
+        if (r.type === 'plot') return formatResponse('Plot', `y = ${r.func} (see Math tab)`);
+        if (r.type === 'matrix') return formatResponse('Matrix', `[[${r.result[0]}], [${r.result[1]}]]`);
+    }
+    if (lower.includes('cv') || lower.includes('resume')) return formatResponse('CV', 'Download or view from the Contact tab.');
+    if (lower.includes('skill')) return formatResponse('Skills', portfolioData.skills.map(s => `• ${s.name}: ${s.description}`).join('<br>'));
+    if (lower.includes('project')) return formatResponse('Projects', portfolioData.projects.map(p => `• ${p.name}: ${p.description}`).join('<br>'));
+    if (lower.includes('education') || lower.includes('study') || lower.includes('university') || lower.includes('degree')) return formatResponse('Education', portfolioData.education.map(e => `• ${e.degree} — ${e.institution} (${e.year})`).join('<br>'));
+    if (lower.includes('certification') || lower.includes('certificate')) return formatResponse('Certifications', portfolioData.certifications.map(c => `• ${c.name} — ${c.issuer} (${c.year})`).join('<br>'));
+    if (lower.includes('contact') || lower.includes('email') || lower.includes('phone')) return formatResponse('Contact', 'muhaammaddanish2327@gmail.com | +92 326 7370173');
+    if (lower.includes('hire') || lower.includes('why')) return formatResponse('Why Hire', 'Strong analytical skills, Python & data analysis, certified by DigiSkills, available for internships.');
+    if (lower.includes('about') || lower.includes('who is')) return formatResponse('About', 'Mathematics student at BZU, specializing in AI, data analysis, and web development.');
+    if (lower.includes('hi') || lower.includes('hello') || lower.includes('hey')) return formatResponse('Hello', 'Ask me about skills, projects, education, or try a math problem!');
+    if (lower.includes('thank')) return formatResponse('Welcome', 'Happy to help!');
+    if (lower.includes('bye') || lower.includes('goodbye')) return formatResponse('Goodbye', 'Thanks for visiting!');
+    return formatResponse('Not sure', 'Try asking about skills, projects, education, or math problems.');
+}
+
+function getTimestamp() { return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
+function scrollChatToBottom() { DOM.chatMessages.scrollTop = DOM.chatMessages.scrollHeight; }
+
+function createMessage(content, isUser = false) {
+    const div = document.createElement('div');
+    div.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+    const avatar = document.createElement('div');
+    avatar.className = 'message-avatar';
+    avatar.textContent = isUser ? '👤' : 'AI';
+    const wrapper = document.createElement('div');
+    wrapper.className = 'message-content-wrapper';
+    const cd = document.createElement('div');
+    cd.className = 'message-content glass-message';
+    cd.innerHTML = content;
+    const t = document.createElement('span');
+    t.className = 'msg-time';
+    t.textContent = isUser ? 'You' : getTimestamp();
+    wrapper.appendChild(cd); wrapper.appendChild(t);
+    div.appendChild(avatar); div.appendChild(wrapper);
+    return div;
+}
+
+function handleUserMessage(msg) {
+    if (!msg.trim()) return;
+    DOM.chatMessages.appendChild(createMessage(`<p>${msg}</p>`, true));
+    saveToHistory('user', msg);
+    DOM.thinkingOverlay.classList.add('active');
+    scrollChatToBottom();
     setTimeout(() => {
-        const botMsg = document.querySelector('.message.bot-message:last-child .message-content');
-        if (botMsg) saveToHistory('bot', botMsg.innerText);
-    }, 100);
-};
+        const response = getBotResponse(msg);
+        DOM.thinkingOverlay.classList.remove('active');
+        DOM.chatMessages.appendChild(createMessage(`<p>${response}</p>`, false));
+        saveToHistory('bot', response);
+        if (DOM.latencyDisplay) DOM.latencyDisplay.textContent = `${Math.floor(600 + Math.random() * 600)}ms`;
+        scrollChatToBottom();
+    }, 500 + Math.random() * 600);
+}
 
-// 2. Smart Suggestions (auto-complete common questions)
-const smartSuggestions = [
-    "Show me your latest project",
-    "What certifications do you have?",
-    "Tell me about your experience",
-    "How can I contact you?",
-    "What are your technical skills?",
-    "Show me your CV"
-];
-const suggestionBox = document.createElement('div');
-suggestionBox.className = 'suggestion-box';
-suggestionBox.style = 'position:absolute;z-index:10;background:#fff;border:1px solid #e2e8f0;border-radius:8px;box-shadow:0 2px 8px #0001;max-width:320px;display:none;';
-userInput.parentNode.appendChild(suggestionBox);
-userInput.addEventListener('input', function() {
-    const val = this.value.toLowerCase();
-    if (!val) return suggestionBox.style.display = 'none';
-    const matches = smartSuggestions.filter(s => s.toLowerCase().includes(val));
-    if (matches.length) {
-        suggestionBox.innerHTML = matches.map(s => `<div style='padding:8px;cursor:pointer;'>${s}</div>`).join('');
-        suggestionBox.style.display = 'block';
-        suggestionBox.style.left = userInput.offsetLeft + 'px';
-        suggestionBox.style.top = (userInput.offsetTop + userInput.offsetHeight + 4) + 'px';
-    } else {
-        suggestionBox.style.display = 'none';
-    }
-});
-suggestionBox.addEventListener('click', function(e) {
-    if (e.target && e.target.textContent) {
-        userInput.value = e.target.textContent;
-        suggestionBox.style.display = 'none';
-        userInput.focus();
-    }
-});
-document.addEventListener('click', function(e) {
-    if (!suggestionBox.contains(e.target) && e.target !== userInput) suggestionBox.style.display = 'none';
-});
+function saveToHistory(r, m) { chatHistory.push({ role: r, message: m, time: Date.now() }); if (chatHistory.length > 100) chatHistory.shift(); }
 
-// 3. Feedback Collection (after each answer)
-function addFeedbackAndSuggestions() {
-    const lastBotMsg = document.querySelector('.message.bot-message:last-child .message-content');
-    if (!lastBotMsg) return;
-    // Feedback box
-    if (!lastBotMsg.querySelector('.feedback-box')) {
-        const box = document.createElement('div');
-        box.className = 'feedback-box';
-        box.style = 'margin-top:10px;display:flex;gap:8px;';
-        box.innerHTML = `<span>Was this helpful?</span>
-            <button style='background:#10b981;color:#fff;border:none;padding:4px 10px;border-radius:5px;cursor:pointer;'>👍</button>
-            <button style='background:#ef4444;color:#fff;border:none;padding:4px 10px;border-radius:5px;cursor:pointer;'>👎</button>`;
-        lastBotMsg.appendChild(box);
-        box.querySelectorAll('button').forEach(btn => {
-            btn.onclick = () => {
-                box.innerHTML = '<span style="color:#64748B;">Thank you for your feedback!</span>';
-            };
-        });
-    }
-    // Dynamic follow-up suggestions (like ChatGPT)
-    if (!lastBotMsg.querySelector('.followup-box')) {
-        const userQ = chatHistory.length ? chatHistory[chatHistory.length-1].message.toLowerCase() : '';
-        let followups = [];
-        if (userQ.includes('project')) followups = ["Show me another project", "What technologies did you use?", "Can I see your code?"];
-        else if (userQ.includes('skills')) followups = ["Show me your certifications", "How did you learn these skills?", "What is your strongest skill?"];
-        else if (userQ.includes('education')) followups = ["Show me your experience", "What was your favorite subject?", "Where did you study?"];
-        else if (userQ.includes('experience')) followups = ["Show me your education", "What did you learn from your job?", "Do you have teaching experience?"];
-        else if (userQ.includes('certification')) followups = ["Show me your skills", "How did you earn these certifications?", "Are you certified in AI?"];
-        else if (userQ.includes('cv') || userQ.includes('resume')) followups = ["Show me your skills", "Show me your experience", "Show me your projects"];
-        else if (userQ.includes('contact')) followups = ["Show me your CV", "Show me your projects", "What are your soft skills?"];
-        else followups = ["Show me your skills", "Show me your projects", "Show me your certifications"];
-        const box = document.createElement('div');
-        box.className = 'followup-box';
-        box.style = 'margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;';
-        box.innerHTML = `<span style='color:#64748B;font-size:13px;'>Explore more:</span>` +
-            followups.map(f => `<button style='background:#e0e7ef;color:#222;border:none;padding:4px 10px;border-radius:5px;cursor:pointer;font-size:13px;'>${f}</button>`).join('');
-        lastBotMsg.appendChild(box);
-        box.querySelectorAll('button').forEach(btn => {
-            btn.onclick = () => {
-                userInput.value = btn.textContent;
-                handleSubmit(new Event('submit'));
-            };
-        });
+function clearChat() {
+    DOM.chatMessages.innerHTML = `<div class="message bot-message"><div class="message-avatar">AI</div><div class="message-content-wrapper"><div class="message-content glass-message"><p>Hi! I can tell you about Muhammad Danish's <strong>skills</strong>, <strong>projects</strong>, <strong>education</strong>, or help with <strong>math</strong>.</p><div class="msg-features"><span class="feature-chip">Skills</span><span class="feature-chip">Projects</span><span class="feature-chip">Education</span><span class="feature-chip">Math</span></div></div><span class="msg-time">Just now</span></div></div>`;
+    chatHistory = [];
+    scrollChatToBottom();
+}
+
+// ===== VOICE ===== //
+let isListening = false, recognition = null;
+function initSpeechRecognition() {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) return false;
+    recognition = new SR();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+    recognition.onstart = () => { isListening = true; DOM.voiceVisualizer.classList.add('active'); };
+    recognition.onresult = (e) => { DOM.userInput.value = e.results[0][0].transcript; setTimeout(() => handleUserMessage(e.results[0][0].transcript), 300); };
+    recognition.onend = () => { isListening = false; DOM.voiceVisualizer.classList.remove('active'); };
+    return true;
+}
+
+// ===== MATH UI ===== //
+function handleMathSolve() {
+    const input = DOM.mathInput.value.trim();
+    if (!input) return;
+    latestMathResult = MathEngine.solve(input);
+    DOM.outputTabs.forEach(t => t.classList.remove('active'));
+    document.querySelector('.output-tab[data-tab="result"]').classList.add('active');
+    DOM.graphCanvas.style.display = 'none';
+    DOM.mathSteps.style.display = 'none';
+    DOM.mathSteps.innerHTML = '';
+    DOM.mathOutput.style.display = 'flex';
+    if (latestMathResult.type === 'error') { DOM.mathOutput.innerHTML = `<div class="math-error">${latestMathResult.message}</div>`; return; }
+    if (latestMathResult.type === 'quadratic') {
+        DOM.mathOutput.innerHTML = `<div class="math-result"><div class="result-value">Solution</div><div style="font-family:var(--font-mono);padding:10px;background:rgba(0,240,255,0.05);border-radius:6px;">x₁ = ${latestMathResult.roots[0]}<br>x₂ = ${latestMathResult.roots[1]}<br>Δ = ${latestMathResult.discriminant}</div></div>`;
+        DOM.mathSteps.innerHTML = `<div style="padding:8px;">${latestMathResult.steps.map(s => `<div>• ${s}</div>`).join('')}</div>`;
+    } else if (latestMathResult.type === 'derivative' || latestMathResult.type === 'integral') {
+        DOM.mathOutput.innerHTML = `<div class="math-result"><div class="result-label">${latestMathResult.type}</div><div style="font-size:20px;padding:10px;background:rgba(0,240,255,0.05);border-radius:6px;">${latestMathResult.result}</div></div>`;
+        DOM.mathSteps.innerHTML = `<div style="padding:8px;">${latestMathResult.steps.map(s => `<div>• ${s}</div>`).join('')}</div>`;
+    } else if (latestMathResult.type === 'factor') {
+        DOM.mathOutput.innerHTML = `<div class="math-result"><div class="result-label">Factor</div><div style="font-size:20px;padding:10px;background:rgba(0,240,255,0.05);border-radius:6px;">${latestMathResult.result}</div></div>`;
+        DOM.mathSteps.innerHTML = `<div style="padding:8px;">${latestMathResult.steps.map(s => `<div>• ${s}</div>`).join('')}</div>`;
+    } else if (latestMathResult.type === 'matrix') {
+        const r = latestMathResult.result;
+        DOM.mathOutput.innerHTML = `<div class="math-result"><div class="result-label">Result</div><div style="font-family:var(--font-mono);padding:10px;background:rgba(0,240,255,0.05);border-radius:6px;">[[${r[0][0]}, ${r[0][1]}], [${r[1][0]}, ${r[1][1]}]]</div></div>`;
+    } else if (latestMathResult.type === 'plot') {
+        DOM.mathOutput.innerHTML = `<div class="math-result"><div class="result-label">y = ${latestMathResult.func}</div></div>`;
+        renderGraph(latestMathResult.func);
+        DOM.graphCanvas.style.display = 'block';
+    } else if (latestMathResult.type === 'eval') {
+        DOM.mathOutput.innerHTML = `<div class="math-result"><div class="result-value">${latestMathResult.result}</div></div>`;
     }
 }
-const originalScrollToBottom = scrollToBottom;
-scrollToBottom = function() {
-    originalScrollToBottom();
-    setTimeout(addFeedbackAndSuggestions, 200);
-};
 
-// 4. Dark Mode Toggle (moved to top right inside chat container)
-const darkToggle = document.createElement('button');
-darkToggle.textContent = '🌙 Dark Mode';
-darkToggle.className = 'dark-toggle-btn';
-let chatContainer = document.querySelector('.chat-container');
-if (chatContainer) {
-    chatContainer.appendChild(darkToggle);
-    darkToggle.style = 'position:absolute;top:18px;right:18px;z-index:1000;padding:10px 18px;background:#222;color:#fff;border:none;border-radius:8px;font-size:15px;box-shadow:0 2px 8px #0002;cursor:pointer;';
-} else {
-    // fallback to body if chat container not found
-    darkToggle.style = 'position:fixed;top:18px;right:18px;z-index:1000;padding:10px 18px;background:#222;color:#fff;border:none;border-radius:8px;font-size:15px;box-shadow:0 2px 8px #0002;cursor:pointer;';
-    document.body.appendChild(darkToggle);
+function renderGraph(funcStr) {
+    const canvas = DOM.graphCanvas;
+    const ctx = canvas.getContext('2d');
+    const parent = canvas.parentElement;
+    const width = parent.clientWidth - 48;
+    const height = 200;
+    canvas.width = width * 2;
+    canvas.height = height * 2;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.scale(2, 2);
+    const xMin = -10, xMax = 10, yMin = -5, yMax = 5;
+    const xS = width / (xMax - xMin), yS = height / (yMax - yMin);
+    const ox = -xMin * xS, oy = yMax * yS;
+    ctx.fillStyle = 'rgba(0,0,0,0.3)'; ctx.fillRect(0, 0, width, height);
+    ctx.strokeStyle = 'rgba(0,240,255,0.08)'; ctx.lineWidth = 1;
+    for (let x = Math.ceil(xMin); x <= Math.floor(xMax); x++) { const px = ox + x * xS; ctx.beginPath(); ctx.moveTo(px, 0); ctx.lineTo(px, height); ctx.stroke(); }
+    for (let y = Math.ceil(yMin); y <= Math.floor(yMax); y++) { const py = oy - y * yS; ctx.beginPath(); ctx.moveTo(0, py); ctx.lineTo(width, py); ctx.stroke(); }
+    ctx.strokeStyle = 'rgba(0,240,255,0.4)'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(0, oy); ctx.lineTo(width, oy); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ox, 0); ctx.lineTo(ox, height); ctx.stroke();
+    const points = MathEngine.plotFunction(funcStr, xMin, xMax);
+    if (!points.length) return;
+    ctx.strokeStyle = '#00f0ff'; ctx.lineWidth = 2.5;
+    ctx.shadowColor = 'rgba(0,240,255,0.5)'; ctx.shadowBlur = 6;
+    ctx.beginPath(); let started = false;
+    for (const p of points) { if (p.y === null) { started = false; continue; } const px = ox + p.x * xS, py = oy - p.y * yS; if (!started) { ctx.moveTo(px, py); started = true; } else ctx.lineTo(px, py); }
+    ctx.stroke(); ctx.shadowBlur = 0;
 }
-let dark = false;
-darkToggle.onclick = () => {
-    dark = !dark;
-    document.body.style.background = dark ? '#18181b' : '#f8fafc';
-    document.body.style.color = dark ? '#f1f5f9' : '#18181b';
-    darkToggle.textContent = dark ? '☀️ Light Mode' : '🌙 Dark Mode';
-    document.querySelectorAll('.message, .section-header, .skill-card').forEach(el => {
-        el.style.background = dark ? '#27272a' : '';
-        el.style.color = dark ? '#f1f5f9' : '';
+
+function switchMathTab(tab) {
+    DOM.outputTabs.forEach(t => t.classList.remove('active'));
+    const a = document.querySelector(`.output-tab[data-tab="${tab}"]`);
+    if (a) a.classList.add('active');
+    DOM.mathOutput.style.display = tab === 'result' ? 'flex' : 'none';
+    DOM.graphCanvas.style.display = tab === 'graph' ? 'block' : 'none';
+    DOM.mathSteps.style.display = tab === 'steps' ? 'block' : 'none';
+    if (tab === 'graph' && latestMathResult && latestMathResult.type === 'plot') renderGraph(latestMathResult.func);
+}
+
+function clearMath() {
+    DOM.mathInput.value = ''; latestMathResult = null;
+    DOM.mathOutput.innerHTML = `<div class="math-placeholder"><div class="placeholder-icon">✏️</div><p>Enter a problem and click <strong>Solve</strong></p></div>`;
+    DOM.graphCanvas.style.display = 'none'; DOM.mathSteps.style.display = 'none'; DOM.mathOutput.style.display = 'flex';
+}
+
+// ===== THREE.JS 3D ===== //
+function init3DBackground() {
+    try {
+        const canvas = DOM.bgCanvas;
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        const count = 800;
+        const geo = new THREE.BufferGeometry();
+        const pos = new Float32Array(count * 3);
+        const col = new Float32Array(count * 3);
+        for (let i = 0; i < count; i++) {
+            pos[i*3] = (Math.random() - 0.5) * 40;
+            pos[i*3+1] = (Math.random() - 0.5) * 40;
+            pos[i*3+2] = (Math.random() - 0.5) * 8;
+            const c = new THREE.Color(); c.setHSL(0.55 + Math.random() * 0.15, 0.7, 0.5);
+            col[i*3] = c.r; col[i*3+1] = c.g; col[i*3+2] = c.b;
+        }
+        geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        geo.setAttribute('color', new THREE.BufferAttribute(col, 3));
+        const mat = new THREE.PointsMaterial({ size: 0.05, vertexColors: true, transparent: true, opacity: 0.4, blending: THREE.AdditiveBlending, sizeAttenuation: true });
+        const particles = new THREE.Points(geo, mat);
+        scene.add(particles);
+        camera.position.z = 10;
+        let mx = 0, my = 0;
+        document.addEventListener('mousemove', (e) => { mx = (e.clientX / window.innerWidth) * 2 - 1; my = -(e.clientY / window.innerHeight) * 2 + 1; });
+        function animate() {
+            requestAnimationFrame(animate);
+            particles.rotation.x += 0.0002 + my * 0.0002;
+            particles.rotation.y += 0.0004 + mx * 0.0002;
+            renderer.render(scene, camera);
+        }
+        animate();
+        window.addEventListener('resize', () => { camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); });
+    } catch (e) { console.log('3D fallback'); }
+}
+
+function animateCounters() {
+    DOM.statNumbers.forEach(counter => {
+        const target = parseInt(counter.dataset.target);
+        const start = Date.now();
+        function update() {
+            const p = Math.min((Date.now() - start) / 1200, 1);
+            const e = 1 - Math.pow(1 - p, 3);
+            counter.textContent = Math.floor(e * target);
+            if (p < 1) requestAnimationFrame(update); else counter.textContent = target + '+';
+        }
+        update();
     });
-};
+}
+
+function initTypingEffect() {
+    const phrases = ['Python, Data Analysis, AI', 'Mathematics Student at BZU', 'Web Developer & AI Enthusiast', 'Available for Internships'];
+    let idx = 0, ci = 0, del = false;
+    function type() {
+        const cur = phrases[idx];
+        if (!del) {
+            DOM.typingEffect.textContent = cur.substring(0, ci + 1); ci++;
+            if (ci === cur.length) { del = true; setTimeout(type, 2000); return; }
+            setTimeout(type, 60);
+        } else {
+            DOM.typingEffect.textContent = cur.substring(0, ci - 1); ci--;
+            if (ci === 0) { del = false; idx = (idx + 1) % phrases.length; setTimeout(type, 400); return; }
+            setTimeout(type, 25);
+        }
+    }
+    type();
+}
+
+function initEvents() {
+    DOM.sendBtn.addEventListener('click', () => { handleUserMessage(DOM.userInput.value); DOM.userInput.value = ''; });
+    DOM.userInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); handleUserMessage(DOM.userInput.value); DOM.userInput.value = ''; } });
+    DOM.clearChatBtn.addEventListener('click', clearChat);
+    DOM.voiceInputBtn.addEventListener('click', () => { if (!recognition && !initSpeechRecognition()) return; if (isListening) recognition.stop(); else recognition.start(); });
+    DOM.quickChips.forEach(c => c.addEventListener('click', () => { if (c.dataset.question) handleUserMessage(c.dataset.question); }));
+    DOM.solveBtn.addEventListener('click', handleMathSolve);
+    DOM.clearMathBtn.addEventListener('click', clearMath);
+    DOM.mathInput.addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.ctrlKey) { e.preventDefault(); handleMathSolve(); } });
+    DOM.exampleChips.forEach(c => c.addEventListener('click', () => { DOM.mathInput.value = c.dataset.math; handleMathSolve(); }));
+    DOM.outputTabs.forEach(t => t.addEventListener('click', () => switchMathTab(t.dataset.tab)));
+    let dark = true;
+    DOM.themeToggle.addEventListener('click', () => { dark = !dark; if (dark) { document.documentElement.removeAttribute('data-theme'); DOM.themeToggle.textContent = '🌙'; } else { document.documentElement.setAttribute('data-theme', 'light'); DOM.themeToggle.textContent = '☀️'; } });
+    document.addEventListener('mousemove', (e) => { DOM.cursorGlow.style.left = e.clientX + 'px'; DOM.cursorGlow.style.top = e.clientY + 'px'; });
+}
+
+function init() {
+    console.log('Starting...');
+    init3DBackground();
+    initTabSwitching();
+    initEvents();
+    initSpeechRecognition();
+    setTimeout(() => {
+        DOM.loadingScreen.classList.add('hidden');
+        animateCounters();
+        initTypingEffect();
+    }, 2800);
+}
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+else init();
