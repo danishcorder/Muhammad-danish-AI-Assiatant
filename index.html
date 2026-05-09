@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Muhammad Danish | AI Portfolio</title>
-    <meta name="description" content="AI-powered portfolio by Muhammad Danish — Mathematics Student & Developer" />
+    <meta name="description" content="Portfolio of Muhammad Danish — Mathematics Student & AI Developer" />
     <meta name="theme-color" content="#0a0a1a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=JetBrains+Mono:wght@400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,406 +22,266 @@
 <div id="loadingScreen">
     <div class="loading-inner">
         <div class="loading-orb">
-            <div class="orb-ring"></div>
-            <div class="orb-ring ring-2"></div>
-            <div class="orb-ring ring-3"></div>
+            <div class="orb-ring"></div><div class="orb-ring ring-2"></div><div class="orb-ring ring-3"></div>
             <div class="orb-core">AI</div>
         </div>
-        <div class="loading-text">
-            <span class="loading-line">Loading...</span>
-            <span class="loading-line" style="animation-delay:0.4s;">Preparing interface...</span>
-            <span class="loading-line" style="animation-delay:0.8s;">Ready</span>
-        </div>
-        <div class="loading-bar-container">
-            <div class="loading-bar" id="loadingBar"></div>
-        </div>
+        <div class="loading-text"><span class="loading-line">Loading...</span><span class="loading-line" style="animation-delay:0.4s">Setting up...</span><span class="loading-line" style="animation-delay:0.8s">Ready</span></div>
+        <div class="loading-bar-container"><div class="loading-bar" id="loadingBar"></div></div>
     </div>
 </div>
 
+<!-- DESKTOP NAV -->
 <nav class="navbar glass" id="navbar">
-    <div class="container-fluid px-2 px-md-3">
+    <div class="nav-inner">
         <div class="nav-logo">
-            <div class="logo-icon">
-                <span class="logo-text">AI</span>
-            </div>
+            <div class="logo-icon"><span class="logo-text">AI</span></div>
             <span class="logo-name">DANISH<span class="logo-accent">.AI</span></span>
         </div>
         <div class="nav-tabs" id="navTabs">
-            <button class="nav-tab active" data-tab="hero">🏠 Home</button>
-            <button class="nav-tab" data-tab="assistant">🤖 Assistant</button>
-            <button class="nav-tab" data-tab="math">🧮 Math AI</button>
-            <button class="nav-tab" data-tab="about">👤 About</button>
-            <button class="nav-tab" data-tab="contact">📬 Contact</button>
+            <button class="nav-tab active" data-tab="hero">Home</button>
+            <button class="nav-tab" data-tab="assistant">Assistant</button>
+            <button class="nav-tab" data-tab="math">Math</button>
+            <button class="nav-tab" data-tab="about">About</button>
+            <button class="nav-tab" data-tab="contact">Contact</button>
         </div>
-        <div class="nav-actions">
-            <button class="theme-toggle glass-icon" id="themeToggle">🌙</button>
-        </div>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
     </div>
+</nav>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="bottom-nav glass" id="bottomNav">
+    <button class="bottom-nav-item active" data-tab="hero"><span>🏠</span><span class="bn-label">Home</span></button>
+    <button class="bottom-nav-item" data-tab="assistant"><span>🤖</span><span class="bn-label">AI</span></button>
+    <button class="bottom-nav-item" data-tab="math"><span>🧮</span><span class="bn-label">Math</span></button>
+    <button class="bottom-nav-item" data-tab="about"><span>👤</span><span class="bn-label">About</span></button>
+    <button class="bottom-nav-item" data-tab="contact"><span>📬</span><span class="bn-label">Contact</span></button>
 </nav>
 
 <div class="tab-content">
 
-<!-- ====== HOME ====== -->
+<!-- HOME -->
 <section id="tab-hero" class="tab-panel active">
-    <div class="hero-bg-effects">
-        <div class="hero-grid"></div>
-        <div class="hero-orb"></div>
-        <div class="hero-orb orb-2"></div>
-    </div>
+    <div class="hero-orb-bg"></div>
     <div class="hero-content">
-        <div class="hero-badge glass">
-            <span class="badge-dot"></span>
-            Muhammad Danish — Mathematics & AI
-        </div>
-        <h1 class="hero-title">
-            <span class="title-line">Building Intelligent</span>
-            <span class="title-line accent">Systems With Math</span>
-        </h1>
-        <div class="typing-container">
-            <span class="typing-effect" id="typingEffect"></span>
-            <span class="cursor-blink">|</span>
-        </div>
-        <p class="hero-subtitle">
-            I'm a mathematics student who builds AI tools, data dashboards, and web applications.
-            This is my portfolio — explore my work, chat with my assistant, or try solving math problems.
-        </p>
+        <div class="hero-badge glass"><span class="badge-dot"></span>Mathematics & AI</div>
+        <h1 class="hero-title"><span class="title-line">Building Intelligent</span> <span class="title-line accent">Systems With Math</span></h1>
+        <div class="typing-container"><span class="typing-effect" id="typingEffect"></span><span class="cursor-blink">|</span></div>
+        <p class="hero-subtitle">I'm a mathematics student building AI tools, dashboards, and web apps. Chat with my assistant or try the math solver.</p>
         <div class="hero-actions">
-            <button class="btn-primary glass tab-trigger" data-tab="assistant">
-                <span>🤖 Chat With Assistant</span>
-            </button>
-            <button class="btn-secondary glass tab-trigger" data-tab="math">
-                <span>🧮 Math Solver</span>
-            </button>
+            <button class="btn-primary tab-trigger" data-tab="assistant"><span>🤖 Chat With AI</span></button>
+            <button class="btn-secondary tab-trigger" data-tab="math"><span>🧮 Solve Math</span></button>
         </div>
         <div class="hero-stats">
-            <div class="stat-item">
-                <span class="stat-number" data-target="7">0</span>
-                <span class="stat-label">Projects</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="8">0</span>
-                <span class="stat-label">Skills</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" data-target="3">0</span>
-                <span class="stat-label">Certifications</span>
-            </div>
+            <div class="stat-item"><span class="stat-number" data-target="7">0</span><span class="stat-label">Projects</span></div>
+            <div class="stat-item"><span class="stat-number" data-target="8">0</span><span class="stat-label">Skills</span></div>
+            <div class="stat-item"><span class="stat-number" data-target="3">0</span><span class="stat-label">Certs</span></div>
         </div>
     </div>
 </section>
 
-<!-- ====== ASSISTANT ====== -->
+<!-- ASSISTANT -->
 <section id="tab-assistant" class="tab-panel">
-    <div class="section-header-compact">
-        <div class="section-badge glass">🤖 AI ASSISTANT</div>
-        <h2 class="section-title">Portfolio<span class="accent">Assistant</span></h2>
-    </div>
-
-    <div class="assistant-layout">
-        <div class="chat-container glass" id="assistantContainer">
-            <div class="chat-header">
-                <div class="chat-avatar">
-                    <div class="avatar-orb">
-                        <span class="avatar-status online"></span>
-                        <span class="avatar-initials">AI</span>
-                    </div>
-                    <div class="avatar-info">
-                        <h3>Muhammad Danish's AI</h3>
-                        <span class="status-text">Online — Ready to help</span>
-                    </div>
-                </div>
-                <div class="chat-header-actions">
-                    <button class="chat-action-btn" id="voiceInputBtn" title="Voice input">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                            <line x1="12" y1="19" x2="12" y2="23"/>
-                            <line x1="8" y1="23" x2="16" y2="23"/>
-                        </svg>
-                    </button>
-                    <button class="chat-action-btn" id="clearChatBtn" title="Clear chat">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-                        </svg>
-                    </button>
-                </div>
+    <div class="chat-container glass" id="assistantContainer">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <div class="avatar-dot online"></div>
+                <span class="avatar-initials">AI</span>
+                <div class="avatar-info"><span class="avatar-name">Danish's AI</span><span class="avatar-status">Online</span></div>
             </div>
-
-            <div class="voice-visualizer" id="voiceVisualizer">
-                <div class="voice-bars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <span class="voice-status">Listening...</span>
-            </div>
-
-            <div class="chat-messages" id="chatMessages">
-                <div class="message bot-message">
-                    <div class="message-avatar">AI</div>
-                    <div class="message-content-wrapper">
-                        <div class="message-content glass-message">
-                            <p>Hi! I can tell you about Muhammad Danish's <strong>skills</strong>, <strong>projects</strong>, <strong>education</strong>, <strong>certifications</strong>, or help with <strong>math problems</strong>. What would you like to know?</p>
-                            <div class="msg-features">
-                                <span class="feature-chip">💼 Skills</span>
-                                <span class="feature-chip">🚀 Projects</span>
-                                <span class="feature-chip">🎓 Education</span>
-                                <span class="feature-chip">🧮 Math</span>
-                                <span class="feature-chip">📄 CV</span>
-                            </div>
-                        </div>
-                        <span class="msg-time">Just now</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="thinking-overlay" id="thinkingOverlay">
-                <div class="thinking-content">
-                    <div class="thinking-orb">
-                        <div class="think-ring"></div>
-                        <div class="think-ring ring-2"></div>
-                        <div class="think-ring ring-3"></div>
-                    </div>
-                    <div class="thinking-wave">
-                        <span></span><span></span><span></span><span></span><span></span>
-                    </div>
-                    <span class="thinking-text">Thinking...</span>
-                </div>
-            </div>
-
-            <div class="quick-actions">
-                <button class="quick-chip glass" data-question="What skills does Muhammad Danish have?">💼 Skills</button>
-                <button class="quick-chip glass" data-question="Show me projects by Muhammad Danish">🚀 Projects</button>
-                <button class="quick-chip glass" data-question="What is Muhammad Danish's education?">🎓 Education</button>
-                <button class="quick-chip glass" data-question="Why should I hire Muhammad Danish?">💡 Hire</button>
-                <button class="quick-chip glass" data-question="Show me Muhammad Danish's CV">📄 CV</button>
-                <button class="quick-chip glass" data-question="Solve x^2 - 4x + 3 = 0">🧮 Math</button>
-            </div>
-
-            <div class="chat-input-area">
-                <div class="input-wrapper">
-                    <input type="text" id="userInput" placeholder="Ask me anything about Muhammad Danish..." autocomplete="off" />
-                    <div class="input-actions">
-                        <button class="send-btn" id="sendBtn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"/>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+            <div class="chat-actions">
+                <button class="chat-btn" id="voiceInputBtn" title="Voice">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                </button>
+                <button class="chat-btn" id="clearChatBtn" title="Clear">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                    </svg>
+                </button>
             </div>
         </div>
 
-        <div class="ai-status-panel glass">
-            <div class="panel-header">
-                <div class="panel-dot"></div>
-                <h4>STATUS</h4>
+        <div class="voice-visualizer" id="voiceVisualizer">
+            <div class="voice-bars">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
             </div>
-            <div class="panel-metrics">
-                <div class="metric">
-                    <span class="metric-label">Knowledge</span>
-                    <div class="metric-bar"><div class="metric-fill" style="width:95%"></div></div>
-                    <span class="metric-value">95%</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-label">Math Engine</span>
-                    <div class="metric-bar"><div class="metric-fill" style="width:99%"></div></div>
-                    <span class="metric-value">99%</span>
-                </div>
+            <span class="voice-status">Listening...</span>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg msg-bot">
+                <div class="msg-avatar">AI</div>
+                <div class="msg-bubble glass"><p>Hi! Ask me about Muhammad Danish's <strong>skills</strong>, <strong>projects</strong>, <strong>education</strong>, or try a <strong>math problem</strong>.</p></div>
+                <span class="msg-time">Just now</span>
             </div>
-            <div class="panel-info">
-                <div class="info-row"><span>Session</span><span id="sessionId">Active</span></div>
-                <div class="info-row"><span>Response</span><span id="latencyDisplay">—</span></div>
+        </div>
+
+        <div class="thinking-overlay" id="thinkingOverlay">
+            <div class="thinking-content">
+                <div class="think-spinner"><div class="ts-ring"></div><div class="ts-ring r2"></div><div class="ts-ring r3"></div></div>
+                <span class="thinking-text">Thinking</span>
             </div>
-            <div class="panel-footer">
-                <div class="neural-activity">
-                    <span></span><span></span><span></span><span></span><span></span>
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
+        </div>
+
+        <div class="quick-chips">
+            <button class="chip" data-question="What skills does Muhammad Danish have?">💼 Skills</button>
+            <button class="chip" data-question="Show me projects">🚀 Projects</button>
+            <button class="chip" data-question="What is his education?">🎓 Education</button>
+            <button class="chip" data-question="Why should I hire him?">💡 Hire</button>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-row">
+                <input type="text" id="userInput" placeholder="Ask me anything..." autocomplete="off" />
+                <button class="send-btn" id="sendBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== MATH ====== -->
+<!-- MATH -->
 <section id="tab-math" class="tab-panel">
-    <div class="section-header-compact">
-        <div class="section-badge glass">🧮 MATH ENGINE</div>
-        <h2 class="section-title">Mathematics<span class="accent">Solver</span></h2>
-    </div>
-
-    <div class="math-layout">
-        <div class="math-input-panel glass">
-            <div class="math-input-header">
-                <h3>🧮 Enter a problem</h3>
-                <span class="math-status">Active</span>
+    <div class="math-scroll">
+        <div class="math-input-card glass">
+            <div class="math-header"><h3>🧮 Enter a problem</h3><span class="math-badge">Active</span></div>
+            <textarea id="mathInput" placeholder="Examples:&#10;x^2 - 4x + 3 = 0&#10;derivative of sin(x)&#10;integral of x^2 dx&#10;plot sin(x)&#10;factor x^2 + 5x + 6&#10;[[1,2],[3,4]] * [[5,6],[7,8]]" rows="4"></textarea>
+            <div class="math-actions">
+                <button class="btn-primary" id="solveBtn">⚡ Solve</button>
+                <button class="btn-secondary" id="clearMathBtn">Clear</button>
             </div>
-            <div class="math-input-area">
-                <textarea id="mathInput" placeholder="Examples:&#10;x^2 - 4x + 3 = 0&#10;derivative of sin(x)&#10;integral of x^2 dx&#10;plot sin(x)&#10;factor x^2 + 5x + 6&#10;[[1,2],[3,4]] * [[5,6],[7,8]]" rows="5"></textarea>
-                <div class="math-input-actions">
-                    <button class="btn-primary" id="solveBtn">⚡ Solve</button>
-                    <button class="btn-secondary" id="clearMathBtn">Clear</button>
-                </div>
-            </div>
-            <div class="math-examples">
-                <span class="example-label">Try:</span>
-                <div class="example-chips">
-                    <button class="example-chip" data-math="x^2 - 4x + 3 = 0">Quadratic</button>
-                    <button class="example-chip" data-math="derivative of sin(x)">Derivative</button>
-                    <button class="example-chip" data-math="integral of x^2 dx">Integral</button>
-                    <button class="example-chip" data-math="plot sin(x)">Plot</button>
-                    <button class="example-chip" data-math="factor x^2 + 5x + 6">Factor</button>
-                    <button class="example-chip" data-math="[[1,2],[3,4]] * [[5,6],[7,8]]">Matrix</button>
-                </div>
+            <div class="math-chips">
+                <span class="chip-label">Try:</span>
+                <button class="m-chip" data-math="x^2 - 4x + 3 = 0">Quadratic</button>
+                <button class="m-chip" data-math="derivative of sin(x)">Derivative</button>
+                <button class="m-chip" data-math="integral of x^2 dx">Integral</button>
+                <button class="m-chip" data-math="plot sin(x)">Plot</button>
+                <button class="m-chip" data-math="factor x^2 + 5x + 6">Factor</button>
+                <button class="m-chip" data-math="[[1,2],[3,4]] * [[5,6],[7,8]]">Matrix</button>
             </div>
         </div>
 
-        <div class="math-output-panel glass">
-            <div class="math-output-header">
-                <h3>📊 Solution</h3>
-                <div class="output-tabs">
-                    <button class="output-tab active" data-tab="result">Result</button>
-                    <button class="output-tab" data-tab="graph">Graph</button>
-                    <button class="output-tab" data-tab="steps">Steps</button>
+        <div class="math-output-card glass">
+            <div class="math-header"><h3>📊 Solution</h3>
+                <div class="math-tabs">
+                    <button class="m-tab active" data-tab="result">Result</button>
+                    <button class="m-tab" data-tab="graph">Graph</button>
+                    <button class="m-tab" data-tab="steps">Steps</button>
                 </div>
             </div>
             <div class="math-output-content" id="mathOutput">
-                <div class="math-placeholder">
-                    <div class="placeholder-icon">🧮</div>
-                    <p>Enter a problem and click <strong>Solve</strong></p>
-                </div>
+                <div class="math-placeholder"><div class="ph-icon">🧮</div><p>Enter a problem and tap <strong>Solve</strong></p></div>
             </div>
-            <canvas id="graphCanvas" class="graph-canvas" style="display:none;"></canvas>
-            <div class="math-steps" id="mathSteps" style="display:none;"></div>
+            <canvas id="graphCanvas" class="graph-canvas" style="display:none"></canvas>
+            <div class="math-steps" id="mathSteps" style="display:none"></div>
         </div>
     </div>
 </section>
 
-<!-- ====== ABOUT ====== -->
+<!-- ABOUT -->
 <section id="tab-about" class="tab-panel">
-    <div class="section-header-compact">
-        <div class="section-badge glass">👤 ABOUT</div>
-        <h2 class="section-title">Muhammad<span class="accent">Danish</span></h2>
-    </div>
-
     <div class="about-grid">
         <div class="about-card glass">
             <div class="card-icon">👤</div>
             <h3>Profile</h3>
-            <p>Mathematics student at Bahauddin Zakariya University, Multan. I work with Python, data analysis, AI, and web development. I enjoy building tools that combine math with software.</p>
+            <p>Mathematics student at Bahauddin Zakariya University, Multan. I build tools with Python, data analysis, AI, and web development.</p>
         </div>
         <div class="about-card glass">
             <div class="card-icon">💻</div>
             <h3>Skills</h3>
             <div class="skill-cloud">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">Pandas/NumPy</span>
-                <span class="skill-tag">Web Development</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Matplotlib</span>
-                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Python</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Pandas/NumPy</span>
+                <span class="skill-tag">Web Dev</span><span class="skill-tag">MySQL</span><span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Matplotlib</span><span class="skill-tag">Git</span>
             </div>
         </div>
         <div class="about-card glass">
             <div class="card-icon">🎓</div>
             <h3>Education</h3>
-            <div class="edu-item"><strong>BS Mathematics</strong><span>Bahauddin Zakariya University, Multan</span><span class="edu-year">2023 – Present</span></div>
-            <div class="edu-item"><strong>ICS (Intermediate)</strong><span>Punjab Group of Colleges, Kabirwala</span><span class="edu-year">2021 – 2023 · 82%</span></div>
+            <div class="edu-item"><strong>BS Mathematics</strong><span>BZU, Multan</span><span class="edu-year">2023 – Present</span></div>
+            <div class="edu-item"><strong>ICS</strong><span>PGC, Kabirwala</span><span class="edu-year">2021 – 2023 · 82%</span></div>
             <div class="edu-item"><strong>Matriculation</strong><span>Khanewal</span><span class="edu-year">2019 – 2021 · 98%</span></div>
         </div>
         <div class="about-card glass">
             <div class="card-icon">🏆</div>
             <h3>Certifications</h3>
-            <div class="cert-item"><div class="cert-badge">✓</div><div><strong>Freelancing</strong><span>DigiSkills Pakistan · 2024</span></div></div>
-            <div class="cert-item"><div class="cert-badge">✓</div><div><strong>MS Excel</strong><span>DigiSkills Pakistan · 2023-2024</span></div></div>
-            <div class="cert-item"><div class="cert-badge">✓</div><div><strong>Python Programming</strong><span>DigiSkills Pakistan · 2024-2025</span></div></div>
+            <div class="cert-item"><span class="cert-badge">✓</span><div><strong>Freelancing</strong><span>DigiSkills · 2024</span></div></div>
+            <div class="cert-item"><span class="cert-badge">✓</span><div><strong>MS Excel</strong><span>DigiSkills · 2023-2024</span></div></div>
+            <div class="cert-item"><span class="cert-badge">✓</span><div><strong>Python</strong><span>DigiSkills · 2024-2025</span></div></div>
         </div>
         <div class="about-card glass">
             <div class="card-icon">📁</div>
             <h3>Projects</h3>
-            <div class="project-mini">
-                <a href="https://muhammaddanish-sage.vercel.app/" target="_blank" class="project-link">Portfolio Website →</a>
-                <a href="https://danishcorder.github.io/DatabaseManagment/index.html" target="_blank" class="project-link">DB Management System →</a>
-                <a href="https://danishcorder.github.io/Top-2025-level-site/" target="_blank" class="project-link">Modern Website →</a>
-                <a href="https://danishcorder.github.io/DatadashBoard2/" target="_blank" class="project-link">Data Dashboard →</a>
-            </div>
+            <a href="https://muhammaddanish-sage.vercel.app/" target="_blank" class="project-link">Portfolio Website →</a>
+            <a href="https://danishcorder.github.io/DatabaseManagment/index.html" target="_blank" class="project-link">DB Management →</a>
+            <a href="https://danishcorder.github.io/Top-2025-level-site/" target="_blank" class="project-link">Modern Website →</a>
+            <a href="https://danishcorder.github.io/DatadashBoard2/" target="_blank" class="project-link">Data Dashboard →</a>
         </div>
         <div class="about-card glass">
             <div class="card-icon">🎯</div>
             <h3>Looking For</h3>
-            <p>Internships in <strong>AI</strong>, <strong>Data Science</strong>, or <strong>Web Development</strong>. Also open to freelance work and project collaborations.</p>
-            <div class="goal-tags">
-                <span>AI / ML</span>
-                <span>Data Science</span>
-                <span>Web Dev</span>
-                <span>Freelance</span>
-            </div>
+            <p>Internships in <strong>AI</strong>, <strong>Data Science</strong>, or <strong>Web Development</strong>. Also open to freelance.</p>
+            <div class="goal-tags"><span>AI / ML</span><span>Data Science</span><span>Web Dev</span><span>Freelance</span></div>
         </div>
     </div>
 </section>
 
-<!-- ====== CONTACT ====== -->
+<!-- CONTACT -->
 <section id="tab-contact" class="tab-panel">
-    <div class="section-header-compact">
-        <div class="section-badge glass">📬 CONTACT</div>
-        <h2 class="section-title">Get In<span class="accent">Touch</span></h2>
-    </div>
-
-    <div class="contact-layout">
-        <div class="contact-info glass">
-            <div class="contact-item-large">
-                <div class="contact-icon-glow">📧</div>
-                <div><span class="contact-label">Email</span><a href="mailto:muhaammaddanish2327@gmail.com">muhaammaddanish2327@gmail.com</a></div>
+    <div class="contact-grid">
+        <div class="contact-card glass">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div><span class="c-label">Email</span><a href="mailto:muhaammaddanish2327@gmail.com">muhaammaddanish2327@gmail.com</a></div>
             </div>
-            <div class="contact-item-large">
-                <div class="contact-icon-glow">📱</div>
-                <div><span class="contact-label">Phone</span><span>+92 326 7370173</span></div>
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div><span class="c-label">Phone</span><span>+92 326 7370173</span></div>
             </div>
-            <div class="contact-item-large">
-                <div class="contact-icon-glow">📍</div>
-                <div><span class="contact-label">Location</span><span>Khanewal, Pakistan</span></div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div><span class="c-label">Location</span><span>Khanewal, Pakistan</span></div>
             </div>
-            <div class="contact-item-large">
-                <div class="contact-icon-glow">💻</div>
-                <div><span class="contact-label">GitHub</span><a href="https://github.com/danishcorder" target="_blank">danishcorder</a></div>
+            <div class="contact-item">
+                <div class="contact-icon">💻</div>
+                <div><span class="c-label">GitHub</span><a href="https://github.com/danishcorder" target="_blank">danishcorder</a></div>
             </div>
-            <div class="contact-item-large">
-                <div class="contact-icon-glow">🌐</div>
-                <div><span class="contact-label">Portfolio</span><a href="https://muhammaddanish-sage.vercel.app/" target="_blank">muhammaddanish-sage.vercel.app</a></div>
+            <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div><span class="c-label">Portfolio</span><a href="https://muhammaddanish-sage.vercel.app/" target="_blank">View Site</a></div>
             </div>
-            <div class="contact-cv-actions">
+            <div class="contact-cv">
                 <a href="Muhammaddanish.CV.pdf" download="Muhammad_Danish_CV.pdf" class="btn-primary">📥 Download CV</a>
                 <a href="Muhammaddanish.CV.pdf" target="_blank" class="btn-secondary">👁️ View CV</a>
             </div>
         </div>
-
-        <div class="contact-social glass">
+        <div class="social-card glass">
             <h3>Links</h3>
-            <div class="social-grid">
-                <a href="https://github.com/danishcorder" target="_blank" class="social-link glass">
+            <div class="social-row">
+                <a href="https://github.com/danishcorder" target="_blank" class="social-btn glass">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
-                <a href="mailto:muhaammaddanish2327@gmail.com" class="social-link glass">
+                <a href="mailto:muhaammaddanish2327@gmail.com" class="social-btn glass">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 </a>
-                <a href="https://muhammaddanish-sage.vercel.app/" target="_blank" class="social-link glass">
+                <a href="https://muhammaddanish-sage.vercel.app/" target="_blank" class="social-btn glass">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 </a>
             </div>
-            <div class="contact-availability">
-                <div class="availability-dot"></div>
-                <span>Available for opportunities</span>
-            </div>
-            <div class="contact-footer-email">
-                <span>📬 muhaammaddanish2327@gmail.com</span>
-            </div>
+            <div class="contact-avail"><div class="avail-dot"></div><span>Open for opportunities</span></div>
+            <div class="contact-email">muhaammaddanish2327@gmail.com</div>
         </div>
     </div>
 </section>
 
-</div>
+</div><!-- /tab-content -->
 
 <script src="script.js"></script>
 </body>
